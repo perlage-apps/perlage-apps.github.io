@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perlage Apps – kleine Apps, mit Sorgfalt gemacht</title>
+<meta name="description" content="Perlage Apps entwickelt Apps für iPhone, iPad und Mac: Übergably für Vermieter und die Pino-Apps für Kinder. Ohne Werbung, ohne Datensammeln.">
+<link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 64 64' width='64' height='64' aria-hidden='true'><circle cx='24' cy='50' r='5' fill='%23D4B483' opacity='.55'/><circle cx='36' cy='36' r='7.5' fill='%23D4B483' opacity='.8'/><circle cx='26' cy='18' r='10.5' fill='%23D4B483'/><circle cx='22.5' cy='14.5' r='3' fill='%23F7F3EA' opacity='.55'/></svg>">
+<style>
+:root{--blau:#14213D;--blau2:#1F3157;--gold:#D4B483;--gold2:#B8955C;--perl:#F7F3EA;--text:#1C2433;--grau:#5B6577}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--perl);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--gold2)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header{background:var(--blau);color:#fff}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.marke{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:700;font-size:20px;letter-spacing:.2px}
+.marke span b{color:var(--gold);font-weight:700}
+nav .links a{color:#D9DEE8;text-decoration:none;margin-left:22px;font-size:15px}
+nav .links a:hover{color:#fff}
+.held{position:relative;overflow:hidden;padding:84px 0 110px}
+.held h1{font-size:clamp(34px,5vw,56px);line-height:1.08;margin:0 0 18px;font-weight:800;letter-spacing:-.5px;max-width:760px}
+.held h1 em{font-style:normal;color:var(--gold)}
+.held p{font-size:19px;color:#C9D1DF;max-width:620px;margin:0}
+.perlen{position:absolute;inset:0;pointer-events:none}
+.perlen i{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.55),rgba(212,180,131,.35) 45%,rgba(212,180,131,.08) 70%);bottom:-40px;animation:steigen linear infinite}
+@keyframes steigen{to{transform:translateY(-760px)}}
+@media (prefers-reduced-motion:reduce){.perlen i{animation:none;display:none}}
+section{padding:72px 0}
+h2{font-size:32px;margin:0 0 8px;color:var(--blau);letter-spacing:-.3px}
+.unter{color:var(--grau);margin:0 0 36px;font-size:17px}
+.raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.app{background:#fff;border-radius:22px;padding:22px;display:flex;gap:18px;align-items:flex-start;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(20,33,61,.06),0 8px 24px rgba(20,33,61,.06);border:1px solid #ECE5D6;transition:transform .15s,box-shadow .15s}
+.app:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(20,33,61,.08),0 14px 34px rgba(20,33,61,.1)}
+.app img{width:72px;height:72px;border-radius:17px;flex:none;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.app h3{margin:2px 0 4px;font-size:19px;color:var(--blau)}
+.app p{margin:0 0 10px;color:var(--grau);font-size:15px}
+.app .fuer{font-size:13px;color:#8A93A3;margin-bottom:10px}
+.status{display:inline-block;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;color:#fff}
+.werte{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.wert{background:#fff;border-radius:18px;padding:22px;border:1px solid #ECE5D6}
+.wert b{display:block;color:var(--blau);margin-bottom:4px;font-size:17px}
+.wert span{color:var(--grau);font-size:15px}
+.recht{background:#fff}
+.recht .spalten{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.recht h3{color:var(--blau);margin:0 0 10px}
+.recht p,.recht li{font-size:15px;color:#3A4456}
+footer{background:var(--blau);color:#AEB8C9;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer a{color:#D9DEE8}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap"><nav><a class="marke" href="./"><svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+<circle cx="24" cy="50" r="5" fill="#D4B483" opacity=".55"/>
+<circle cx="36" cy="36" r="7.5" fill="#D4B483" opacity=".8"/>
+<circle cx="26" cy="18" r="10.5" fill="#D4B483"/>
+<circle cx="22.5" cy="14.5" r="3" fill="#F7F3EA" opacity=".55"/>
+</svg><span>Perlage <b>Apps</b></span></a>
+<div class="links"><a href="#apps">Apps</a><a href="#kontakt">Kontakt</a><a href="#impressum">Impressum</a></div></nav></div>
+<div class="held"><div class="perlen"><i style="left:8%;width:10px;height:10px;animation-duration:16s;animation-delay:-2s"></i><i style="left:15%;width:6px;height:6px;animation-duration:12s;animation-delay:-8s"></i><i style="left:22%;width:14px;height:14px;animation-duration:19s;animation-delay:-5s"></i><i style="left:34%;width:8px;height:8px;animation-duration:14s;animation-delay:-11s"></i><i style="left:47%;width:5px;height:5px;animation-duration:11s;animation-delay:-3s"></i><i style="left:58%;width:12px;height:12px;animation-duration:18s;animation-delay:-9s"></i><i style="left:66%;width:7px;height:7px;animation-duration:13s;animation-delay:-1s"></i><i style="left:74%;width:16px;height:16px;animation-duration:21s;animation-delay:-13s"></i><i style="left:83%;width:9px;height:9px;animation-duration:15s;animation-delay:-6s"></i><i style="left:91%;width:6px;height:6px;animation-duration:12s;animation-delay:-10s"></i><i style="left:52%;width:10px;height:10px;animation-duration:17s;animation-delay:-14s"></i><i style="left:28%;width:5px;height:5px;animation-duration:10s;animation-delay:-7s"></i></div><div class="wrap">
+<h1>Kleine Apps, <em>mit Sorgfalt</em> gemacht.</h1>
+<p>Perlage Apps entwickelt Apps für iPhone, iPad und Mac – für Vermieter, die ohne Papierkram arbeiten wollen, und für Kinder, die mit Pino malen, rechnen und spielen. Ohne Werbung, ohne Datensammeln.</p>
+</div></div>
+</header>
+
+<section id="apps"><div class="wrap">
+<h2>Unsere Apps</h2>
+<p class="unter">Jede App hat eine eigene Seite mit allen Funktionen, Preisen, Datenschutz und Hilfe.</p>
+<div class="raster">
+<a class="app" href="uebergably/">
+<img src="bilder/uebergably.jpg" alt="App-Symbol Übergably" width="72" height="72">
+<div><h3>Übergably</h3><p>Wohnungsübergaben ohne Papierkram: Protokoll mit Fotos, Zählerständen und Unterschriften – für Vermieter.</p><div class="fuer">Für Vermieterinnen und Vermieter</div>
+<span class="status" style="background:#5B6577">Bald verfügbar</span></div></a>
+<a class="app" href="pino-malt/">
+<img src="bilder/pino-malt.jpg" alt="App-Symbol Pino malt" width="72" height="72">
+<div><h3>Pino malt</h3><p>Malen und Ausmalen mit Pino, dem kleinen Pinguin – auf echtem DIN-A4-Blatt, ohne Werbung.</p><div class="fuer">Für Kinder im Kindergarten- und Grundschulalter</div>
+<span class="status" style="background:#2E7D5B">Im App Store</span></div></a>
+<a class="app" href="pino-rechnet/">
+<img src="bilder/pino-rechnet.jpg" alt="App-Symbol Pino rechnet" width="72" height="72">
+<div><h3>Pino rechnet</h3><p>Mit Pinguin Pino durch die Grundschul-Mathe: 63 Inseln von Klasse 1 bis 4 – ohne Werbung, ohne Datensammlung.</p><div class="fuer">Für Grundschulkinder, Klasse 1 bis 4</div>
+<span class="status" style="background:#9A6B12">Bei Apple in Prüfung</span></div></a>
+<a class="app" href="pino-vorschule/">
+<img src="bilder/pino-vorschule.jpg" alt="App-Symbol Pino Vorschule" width="72" height="72">
+<div><h3>Pino Vorschule</h3><p>Spielend lernen mit Pino, dem kleinen Pinguin – für Kita-Kinder von 3 bis 6, ganz ohne Lesen.</p><div class="fuer">Für Kita-Kinder von 3 bis 6 Jahren</div>
+<span class="status" style="background:#5B6577">Bald verfügbar</span></div></a>
+<a class="app" href="pino-spielt/">
+<img src="bilder/pino-spielt.jpg" alt="App-Symbol Pino spielt" width="72" height="72">
+<div><h3>Pino spielt</h3><p>Zehn Mini-Spiele mit dem Pinguin Pino in fünf Welten – für Kinder von 4 bis 8, ohne Werbung.</p><div class="fuer">Für Kinder von 4 bis 8 Jahren</div>
+<span class="status" style="background:#9A6B12">Bei Apple in Prüfung</span></div></a>
+<a class="app" href="pino-doodle/">
+<img src="bilder/pino-doodle.jpg" alt="App-Symbol Pino Doodle" width="72" height="72">
+<div><h3>Pino Doodle</h3><p>Die erste Mal-App für Kinder von 1 bis 4: dicke Wachsmalstifte, 150 Ausmalbilder und Pino, der Pinguin.</p><div class="fuer">Für Kinder von 1 bis 4 Jahren</div>
+<span class="status" style="background:#2E7D5B">Im App Store</span></div></a>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Worauf wir achten</h2>
+<p class="unter">Diese Grundsätze gelten für jede App von Perlage Apps.</p>
+<div class="werte">
+<div class="wert"><b>Keine Werbung</b><span>In keiner unserer Apps gibt es Werbung – auch nicht in den Gratis-Versionen.</span></div>
+<div class="wert"><b>Deine Daten bleiben bei dir</b><span>Kein Konto, kein Tracking, keine Analyse-Werkzeuge. Gespeichert wird auf deinem Gerät oder in deiner eigenen iCloud.</span></div>
+<div class="wert"><b>Kinder geschützt</b><span>In den Pino-Apps liegen Käufe, Einstellungen und Links nach draußen hinter einer Elternfrage.</span></div>
+<div class="wert"><b>Ehrliche Preise</b><span>Klar beschrieben, mit Testzeit und Familienfreigabe. Abos lassen sich jederzeit in den Apple-Einstellungen kündigen.</span></div>
+</div>
+</div></section>
+
+<section class="recht" id="kontakt"><div class="wrap spalten">
+<div>
+<h3>Kontakt und Hilfe</h3>
+<p>Fragen, Wünsche oder ein Problem mit einer App? Schreib uns: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a></p>
+<p>Antworten zu den einzelnen Apps findest du auf der jeweiligen App-Seite unter „Hilfe“.</p>
+</div>
+<div id="impressum">
+<h3>Impressum</h3>
+<p>Angaben gemäß § 5 DDG</p>
+<p>Alexander Matthias Müller<br>Perlage Apps<br>Barnefeldstraße 12E<br>31515 Wunstorf<br>Deutschland</p>
+<p>E-Mail: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a></p>
+<p>Verantwortlich für den Inhalt: Alexander Matthias Müller, Anschrift wie oben.</p>
+</div>
+<div id="datenschutz">
+<h3>Datenschutz auf dieser Website</h3>
+<p>Diese Website wird bei GitHub Pages (GitHub Inc., USA) bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Daten wie deine IP-Adresse, um die Seite auszuliefern und die Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). Wir setzen keine Cookies, laden keine Schriften oder Inhalte von Drittanbietern und werten die Aufrufe nicht aus.</p>
+<p>Verantwortlich: Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a>. Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch (Art. 15–21 DSGVO) und kannst dich bei einer Aufsichtsbehörde beschweren, z. B. bei Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover.</p>
+<p>Die Datenschutzhinweise zu den einzelnen Apps stehen auf der jeweiligen App-Seite.</p>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<span style="display:flex;align-items:center;gap:10px"><svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true">
+<circle cx="24" cy="50" r="5" fill="#D4B483" opacity=".55"/>
+<circle cx="36" cy="36" r="7.5" fill="#D4B483" opacity=".8"/>
+<circle cx="26" cy="18" r="10.5" fill="#D4B483"/>
+<circle cx="22.5" cy="14.5" r="3" fill="#F7F3EA" opacity=".55"/>
+</svg> © 2026 Perlage Apps · Alexander Matthias Müller</span>
+<span><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a> · <a href="mailto:info.perlage-apps@web.de">Kontakt</a></span>
+</div></footer>
+</body></html>
