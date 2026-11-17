@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perlage Games – Perlage Apps</title>
+<meta name="description" content="Perlage Games: 17 zeitlose Karten-, Brett- und Denkspiele in einer edlen App. Ohne Konto und ohne fremde Werbung.">
+<style>
+  :root {
+    --gruen-hell: #2A6B50; --gruen: #12402F; --gruen-dunkel: #061A13;
+    --champagner: #D4B483; --perlweiss: #F7F3EA;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--perlweiss);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background: radial-gradient(ellipse at 50% 0%, var(--gruen-hell) 0%, var(--gruen) 45%, var(--gruen-dunkel) 100%) fixed;
+    min-height: 100vh;
+  }
+  a { color: var(--champagner); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 22px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand { color: var(--champagner); text-decoration: none; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
+  .lang button {
+    background: rgba(255,255,255,.08); color: var(--perlweiss); border: 1px solid rgba(212,180,131,.35);
+    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 14px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--champagner); color: var(--gruen-dunkel); }
+  .hero { text-align: center; padding: 56px 0 24px; }
+  .hero img { width: 120px; height: 120px; border-radius: 27px; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+  h1 { font-size: 44px; line-height: 1.1; margin: 22px 0 10px; font-weight: 800; letter-spacing: -.01em; }
+  h2 { font-size: 26px; margin: 48px 0 12px; }
+  h3 { font-size: 18px; margin: 22px 0 4px; color: var(--champagner); }
+  .lead { font-size: 19px; opacity: .8; max-width: 560px; margin: 0 auto; }
+  .card {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(212,180,131,.22);
+    border-radius: 22px; padding: 22px 24px; margin: 18px 0;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .grid .card { margin: 0; }
+  .muted { opacity: .7; font-size: 15px; }
+  nav.toc { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+  ul { padding-left: 20px; }
+  footer { margin-top: 56px; font-size: 14px; opacity: .7; text-align: center; }
+  [data-l] { display: none; }
+  html[lang="de"] [data-l="de"], html[lang="en"] [data-l="en"] { display: revert; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="https://perlage-apps.github.io/">Perlage Apps</a>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" data-set="de">DE</button>
+      <button type="button" data-set="en">EN</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="icon.png" alt="Perlage Games App-Icon">
+    <h1>Perlage Games</h1>
+    <p class="lead" data-l="de">17 zeitlose Karten-, Brett- und Denkspiele in einer edlen App – ohne Konto und ohne fremde Werbung.</p>
+    <p class="lead" data-l="en">17 timeless card, board and puzzle games in one elegant app – no account and no third-party ads.</p>
+    <nav class="toc">
+      <a href="#spiele" data-l="de">Spiele</a><a href="#spiele" data-l="en">Games</a>
+      <a href="#support">Support</a>
+      <a href="#datenschutz" data-l="de">Datenschutz</a><a href="#datenschutz" data-l="en">Privacy</a>
+      <a href="https://perlage-apps.github.io/#impressum" data-l="de">Impressum</a><a href="https://perlage-apps.github.io/#impressum" data-l="en">Legal notice</a>
+    </nav>
+  </section>
+
+  <section id="spiele">
+    <h2 data-l="de">Die Spiele</h2><h2 data-l="en">The games</h2>
+    <div class="grid">
+      <div class="card"><h3 data-l="de">Kartenspiele</h3><h3 data-l="en">Card games</h3>Klondike · Spider · Four Cells · <span data-l="de">Pyramide</span><span data-l="en">Pyramid</span> · Golf</div>
+      <div class="card"><h3 data-l="de">Brettspiele</h3><h3 data-l="en">Board games</h3>Four in a Row · Reversi · <span data-l="de">Dame · Mühle · Schach</span><span data-l="en">Checkers · Mill · Chess</span></div>
+      <div class="card"><h3 data-l="de">Denkspiele</h3><h3 data-l="en">Puzzle games</h3>Sudoku · Mines · Merge · Snake · Mahjong · <span data-l="de">Nonogramm · Flipper</span><span data-l="en">Nonogram · Pinball</span></div>
+    </div>
+    <div class="card" data-l="de">
+      <h3>Jeden Tag etwas Neues</h3>
+      <ul>
+        <li>Herausforderung des Tages – weltweit dasselbe Spiel, mit Rangliste in Game Center</li>
+        <li>Perlen-Level, Erfolge und Statistiken für alle Spiele</li>
+        <li>Serien mit Joker-Tag und Wochen-Events mit exklusiven Kartendesigns</li>
+      </ul>
+      <h3>Zusammen spielen</h3>
+      <ul>
+        <li>Brettspiele zu zweit an einem Gerät, gegen den Computer, in der Nähe (ohne Internet), online über Game Center oder per SharePlay</li>
+      </ul>
+      <p class="muted">In 13 Sprachen. Optional: „Werbefrei“ als Einmalkauf blendet auch die Hinweise auf unsere eigenen Apps aus.</p>
+    </div>
+    <div class="card" data-l="en">
+      <h3>Something new every day</h3>
+      <ul>
+        <li>Challenge of the day – the same game worldwide, with a Game Center leaderboard</li>
+        <li>Pearl Levels, achievements and statistics for every game</li>
+        <li>Streaks with a joker day and weekly events with exclusive card designs</li>
+      </ul>
+      <h3>Play together</h3>
+      <ul>
+        <li>Board games for two on one device, against the computer, nearby (no internet), online via Game Center or with SharePlay</li>
+      </ul>
+      <p class="muted">In 13 languages. Optional: the one-time “Ad-free” purchase also hides the notes about our own apps.</p>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <div class="card" data-l="de">
+      <p>Fragen, Ideen oder ein Fehler gefunden? Schreib uns an <a href="mailto:info.perlage-apps@web.de?subject=Feedback%20zu%20Perlage%20Games">info.perlage-apps@web.de</a>.</p>
+      <h3>Wie spiele ich mit jemandem zusammen?</h3>
+      <p>Öffne ein Brettspiel (Four in a Row, Reversi, Dame, Mühle oder Schach) und wähle: auf diesem Gerät, gegen den Computer, in der Nähe, online oder SharePlay.</p>
+      <h3>Warum fragt die App nach dem lokalen Netzwerk?</h3>
+      <p>Nur für „In der Nähe“: So finden sich zwei Geräte direkt, ohne Internet.</p>
+      <h3>Was ist die Herausforderung des Tages?</h3>
+      <p>Jeden Tag gibt es ein Spiel, das für alle auf der Welt gleich verteilt ist. Wer in Game Center angemeldet ist, landet mit seiner Zeit in der Rangliste.</p>
+      <h3>Was ist der Joker-Tag?</h3>
+      <p>Verpasst du einen Tag, rettet der Joker deine Serie. Danach ist er nach 7 Tagen wieder bereit.</p>
+      <h3>Wie stelle ich einen Kauf wieder her?</h3>
+      <p>Einstellungen (Zahnrad) › Werbefrei › „Käufe wiederherstellen“.</p>
+      <h3>Wie ändere ich die Sprache?</h3>
+      <p>Einstellungen (Zahnrad) › Sprache. Standard ist die Sprache deines Geräts.</p>
+      <h3>Wird mein Fortschritt gesichert?</h3>
+      <p>Fortschritt und Statistik liegen nur auf deinem Gerät. Wenn du die App löschst, sind sie weg.</p>
+    </div>
+    <div class="card" data-l="en">
+      <p>Questions, ideas or found a bug? Write to us at <a href="mailto:info.perlage-apps@web.de?subject=Feedback%20on%20Perlage%20Games">info.perlage-apps@web.de</a>.</p>
+      <h3>How do I play with someone?</h3>
+      <p>Open a board game (Four in a Row, Reversi, Checkers, Mill or Chess) and choose: on this device, against the computer, nearby, online or SharePlay.</p>
+      <h3>Why does the app ask for local network access?</h3>
+      <p>Only for “Nearby”: this lets two devices find each other directly, without the internet.</p>
+      <h3>What is the challenge of the day?</h3>
+      <p>Every day there is one game dealt the same way for everyone in the world. If you are signed in to Game Center, your time goes on the leaderboard.</p>
+      <h3>What is the joker day?</h3>
+      <p>If you miss a day, the joker saves your streak. It is ready again after 7 days.</p>
+      <h3>How do I restore a purchase?</h3>
+      <p>Settings (gear) › Ad-free › “Restore purchases”.</p>
+      <h3>How do I change the language?</h3>
+      <p>Settings (gear) › Language. By default the app uses your device language.</p>
+      <h3>Is my progress backed up?</h3>
+      <p>Progress and statistics are stored only on your device. If you delete the app, they are gone.</p>
+    </div>
+  </section>
+
+  <section id="datenschutz">
+    <h2 data-l="de">Datenschutzerklärung</h2><h2 data-l="en">Privacy Policy</h2>
+    <div class="card" data-l="de">
+      <h3>Verantwortlicher</h3>
+      <p>Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a></p>
+      <h3>Keine Erhebung personenbezogener Daten</h3>
+      <p>Perlage Games erhebt, speichert und überträgt keine personenbezogenen Daten. Es gibt kein Benutzerkonto bei uns, keine fremde Werbung, kein Tracking und keine Analyse- oder Statistikdienste. Wir betreiben keine eigenen Server. Hinweise auf weitere Apps von Perlage Apps werden über den App Store von Apple angezeigt; dabei erheben wir keine Daten.</p>
+      <h3>Speicherung auf dem Gerät</h3>
+      <p>Die gewählten Spieleinstellungen (z. B. Schwierigkeitsstufe, Sprache, Kartendesign) sowie Spielstatistiken und Fortschritt (Siege, Serien, Bestzeiten, Perlen-Level, Erfolge) werden ausschließlich lokal auf deinem Gerät gespeichert. Diese Daten verlassen das Gerät nicht und werden beim Löschen der App entfernt.</p>
+      <h3>Berechtigungen</h3>
+      <p>Für das Spielen „In der Nähe“ fragt die App nach dem Zugriff auf das lokale Netzwerk. Mitteilungen nutzt die App nur, wenn du die Erinnerung an die tägliche Herausforderung selbst einschaltest; die Erinnerung wird lokal auf deinem Gerät geplant. Weitere Berechtigungen, etwa für Kamera, Mikrofon, Fotos, Kontakte oder Standort, benötigt die App nicht.</p>
+      <h3>Spitzname und gemeinsames Spielen</h3>
+      <p>Deinen Spitznamen und dein Symbol speichert die App nur auf deinem Gerät. Wenn du mit anderen spielst, werden Spitzname, Symbol und deine Spielzüge ausschließlich an deine Mitspieler übertragen. Wir erhalten diese Daten nicht.</p>
+      <h3>In der Nähe</h3>
+      <p>Beim Spielen „In der Nähe“ verbinden sich die Geräte direkt per WLAN oder Bluetooth (Apple Multipeer Connectivity), ohne Internet und ohne Server.</p>
+      <h3>Game Center und SharePlay</h3>
+      <p>Online-Spiele laufen über Apple Game Center, gemeinsames Spielen im FaceTime-Anruf über Apple SharePlay. Wenn du in Game Center angemeldet bist, werden deine Zeit bei der täglichen Herausforderung (Rangliste) und deine Erfolge an Game Center übermittelt. Dafür verarbeitet Apple Daten wie deinen Game-Center-Namen in eigener Verantwortung; es gilt die Datenschutzrichtlinie von Apple. Wir erhalten diese Daten nicht.</p>
+      <h3>Kinder</h3>
+      <p>Die App kann auch von Kindern genutzt werden. Da keine personenbezogenen Daten erhoben werden, werden auch keine Daten von Kindern verarbeitet.</p>
+      <h3>Kontakt per E-Mail</h3>
+      <p>Wenn du uns per E-Mail kontaktierst, verwenden wir deine Angaben nur, um deine Anfrage zu beantworten. Die Nachricht wird nicht an Dritte weitergegeben und gelöscht, sobald sie nicht mehr benötigt wird.</p>
+      <h3>In-App-Kauf „Werbefrei“</h3>
+      <p>Den optionalen Kauf „Werbefrei“ wickelt ausschließlich Apple über den App Store ab. Zahlungsdaten erhält Perlage Apps nicht. Die App erfährt von Apple nur, ob der Kauf vorliegt, und speichert diese Information auf deinem Gerät.</p>
+      <h3>App Store</h3>
+      <p>Beim Herunterladen der App verarbeitet Apple Daten in eigener Verantwortung. Hierauf haben wir keinen Einfluss. Es gilt die Datenschutzrichtlinie von Apple.</p>
+      <h3>Deine Rechte</h3>
+      <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren. Zuständig ist: Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover.</p>
+      <h3>Stand</h3>
+      <p>November 2026</p>
+    </div>
+    <div class="card" data-l="en">
+      <p class="muted">This is a translation for your convenience. The German version is legally binding.</p>
+      <h3>Controller</h3>
+      <p>Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Germany, email: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a></p>
+      <h3>No collection of personal data</h3>
+      <p>Perlage Games does not collect, store or transmit any personal data. There is no user account with us, no third-party advertising, no tracking and no analytics or statistics services. We do not operate our own servers. Notes about other apps from Perlage Apps are shown via Apple's App Store; we do not collect any data in doing so.</p>
+      <h3>Storage on the device</h3>
+      <p>Your game settings (e.g. difficulty, language, card design) as well as game statistics and progress (wins, streaks, best times, Pearl Level, achievements) are stored only locally on your device. This data never leaves the device and is removed when you delete the app.</p>
+      <h3>Permissions</h3>
+      <p>For playing “Nearby”, the app asks for access to the local network. The app only uses notifications if you turn on the reminder for the daily challenge yourself; the reminder is scheduled locally on your device. The app does not need any other permissions, such as camera, microphone, photos, contacts or location.</p>
+      <h3>Nickname and playing together</h3>
+      <p>The app stores your nickname and symbol only on your device. When you play with others, your nickname, symbol and moves are transmitted only to the people you play with. We do not receive this data.</p>
+      <h3>Nearby</h3>
+      <p>When playing “Nearby”, the devices connect directly via Wi-Fi or Bluetooth (Apple Multipeer Connectivity), without internet and without servers.</p>
+      <h3>Game Center and SharePlay</h3>
+      <p>Online games run via Apple Game Center, playing together in a FaceTime call via Apple SharePlay. If you are signed in to Game Center, your time in the daily challenge (leaderboard) and your achievements are sent to Game Center. Apple processes data such as your Game Center name under its own responsibility; Apple's privacy policy applies. We do not receive this data.</p>
+      <h3>Children</h3>
+      <p>The app may also be used by children. Since no personal data is collected, no data of children is processed either.</p>
+      <h3>Contact by email</h3>
+      <p>If you contact us by email, we use your details only to answer your request. The message is not passed on to third parties and is deleted as soon as it is no longer needed.</p>
+      <h3>“Ad-free” in-app purchase</h3>
+      <p>The optional “Ad-free” purchase is handled exclusively by Apple through the App Store. Perlage Apps does not receive any payment data. The app only learns from Apple whether the purchase exists and stores this information on your device.</p>
+      <h3>App Store</h3>
+      <p>When you download the app, Apple processes data under its own responsibility. We have no influence on this. Apple's privacy policy applies.</p>
+      <h3>Your rights</h3>
+      <p>You have the right to access, rectification, erasure, restriction of processing, data portability and objection. You can also lodge a complaint with a data protection supervisory authority. The competent authority is: Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover, Germany.</p>
+      <h3>Last updated</h3>
+      <p>November 2026</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Alexander Matthias Müller (Perlage Apps) ·
+    <a href="https://perlage-apps.github.io/#impressum" data-l="de">Impressum</a><a href="https://perlage-apps.github.io/#impressum" data-l="en">Legal notice</a> ·
+    <a href="#datenschutz" data-l="de">Datenschutz</a><a href="#datenschutz" data-l="en">Privacy</a>
+  </footer>
+</div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    function set(l) {
+      root.lang = l;
+      document.querySelectorAll('.lang button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false');
+      });
+      try { localStorage.setItem('perlage.lang', l); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('perlage.lang'); } catch (e) {}
+    var nav = (navigator.language || 'de').toLowerCase();
+    set(saved || (nav.indexOf('de') === 0 ? 'de' : 'en'));
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.addEventListener('click', function () { set(b.dataset.set); });
+    });
+  })();
+</script>
+</body>
+</html>
