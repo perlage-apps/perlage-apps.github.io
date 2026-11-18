@@ -22,7 +22,10 @@ nav a:first-child{margin-left:0}
 .held p{font-size:19px;margin:0 0 18px;color:#CFE3F2;max-width:620px}
 .knopf{display:inline-block;background:#F2B33D;color:#2A1E12;font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none;font-size:16px}
 .hinweis{display:inline-block;background:rgba(255,255,255,.75);color:#2A1E12;font-weight:700;padding:11px 20px;border-radius:999px;font-size:15px}
-.geschenk{display:flex;gap:14px;align-items:center;background:#FBE9E7;border:1.5px solid #F2B8B0;color:#7A1810;border-radius:18px;padding:14px 20px;margin-top:-26px;position:relative;box-shadow:0 6px 18px rgba(0,0,0,.06)}.geschenk span{font-size:28px}.geschenk p{margin:0;font-size:16px}
+.geschenk{position:relative;overflow:hidden;display:flex;gap:18px;align-items:center;margin:-28px 0 0;padding:18px 24px;border-radius:20px;color:#F7EDE6;background:radial-gradient(130% 200% at 0% 0%,#8E1B30 0%,#6A1224 45%,#430A17 100%);border:1px solid rgba(212,180,131,.55);box-shadow:0 0 0 5px rgba(212,180,131,.10),0 16px 36px -18px rgba(67,10,23,.6)}
+.geschenk::after{content:"";position:absolute;inset:6px;border-radius:15px;border:1px solid rgba(212,180,131,.28);pointer-events:none}
+.geschenk .schleife{flex:none;width:40px;height:40px}
+.geschenk p{margin:0;font-size:16px;line-height:1.5}.geschenk strong{color:#F3E3C3;font-weight:700}
 .bilder{display:flex;gap:18px;overflow-x:auto;padding:36px 0 8px;scroll-snap-type:x mandatory}
 .bilder figure{margin:0;flex:none;scroll-snap-align:start;text-align:center}
 .bilder img{height:420px;width:auto;border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,.12);display:block}

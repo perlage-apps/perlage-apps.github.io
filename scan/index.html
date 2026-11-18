@@ -22,7 +22,10 @@ nav a:first-child{margin-left:0}
 .held p{font-size:19px;margin:0 0 18px;color:#6D625F;max-width:620px}
 .knopf{display:inline-block;background:#C8140C;color:#FFFFFF;font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none;font-size:16px}
 .hinweis{display:inline-block;background:rgba(255,255,255,.75);color:#1F1A19;font-weight:700;padding:11px 20px;border-radius:999px;font-size:15px}
-.geschenk{display:flex;gap:14px;align-items:center;background:#FBE9E7;border:1.5px solid #F2B8B0;color:#7A1810;border-radius:18px;padding:14px 20px;margin-top:-26px;position:relative;box-shadow:0 6px 18px rgba(0,0,0,.06)}.geschenk span{font-size:28px}.geschenk p{margin:0;font-size:16px}
+.geschenk{position:relative;overflow:hidden;display:flex;gap:18px;align-items:center;margin:-28px 0 0;padding:18px 24px;border-radius:20px;color:#F7EDE6;background:radial-gradient(130% 200% at 0% 0%,#8E1B30 0%,#6A1224 45%,#430A17 100%);border:1px solid rgba(212,180,131,.55);box-shadow:0 0 0 5px rgba(212,180,131,.10),0 16px 36px -18px rgba(67,10,23,.6)}
+.geschenk::after{content:"";position:absolute;inset:6px;border-radius:15px;border:1px solid rgba(212,180,131,.28);pointer-events:none}
+.geschenk .schleife{flex:none;width:40px;height:40px}
+.geschenk p{margin:0;font-size:16px;line-height:1.5}.geschenk strong{color:#F3E3C3;font-weight:700}
 .bilder{display:flex;gap:18px;overflow-x:auto;padding:36px 0 8px;scroll-snap-type:x mandatory}
 .bilder figure{margin:0;flex:none;scroll-snap-align:start;text-align:center}
 .bilder img{height:420px;width:auto;border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,.12);display:block}
@@ -51,7 +54,7 @@ footer a{color:#14213D}
 <div><h1>Paperlo</h1><p>Dein PDF-Buddy: PDFs verkleinern, scannen, importieren und ordnen – direkt auf dem iPhone, ohne Konto und Werbung.</p><span class="hinweis">Bei Apple in Prüfung</span></div></div>
 </div></div>
 
-<div class="wrap"><div class="geschenk" data-geschenk><span aria-hidden="true">🎁</span><p><strong>Weihnachtsgeschenk:</strong> Bis 31.12.2026 sind in Paperlo alle Pro-Funktionen gratis. Ohne Abo, ohne Kauf.</p></div></div>
+<div class="wrap"><div class="geschenk" data-geschenk><svg class="schleife" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3E3C3"/><stop offset=".5" stop-color="#D4B483"/><stop offset="1" stop-color="#A9844A"/></linearGradient></defs><g fill="none" stroke="url(#gg)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="7" y="20" width="34" height="22" rx="3"/><path d="M5 14h38v6H5z"/><path d="M24 14v28"/><path d="M24 14c-3-6-11-9-12-4s7 4 12 4zM24 14c3-6 11-9 12-4s-7 4-12 4z"/></g></svg><p><strong>Unser Weihnachtsgeschenk:</strong> Bis 31.12.2026 sind in Paperlo alle Pro-Funktionen gratis. Ohne Abo, ohne Kauf.</p></div></div>
 <div class="wrap"><div class="bilder"><figure><img src="bild1.jpg" alt="PDF verkleinern: Ziel antippen, fertig" loading="lazy"><figcaption>PDF verkleinern: Ziel antippen, fertig</figcaption></figure><figure><img src="bild2.jpg" alt="Scannen und Ränder prüfen" loading="lazy"><figcaption>Scannen und Ränder prüfen</figcaption></figure><figure><img src="bild3.jpg" alt="Ordner auf deinem iPhone" loading="lazy"><figcaption>Ordner auf deinem iPhone</figcaption></figure></div></div>
 
 <section id="funktionen"><div class="wrap zwei">
