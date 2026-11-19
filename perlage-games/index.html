@@ -45,6 +45,11 @@
   footer { margin-top: 56px; font-size: 14px; opacity: .7; text-align: center; }
   [data-l] { display: none; }
   html[lang="de"] [data-l="de"], html[lang="en"] [data-l="en"] { display: revert; }
+  .bilder { display: flex; gap: 16px; overflow-x: auto; padding: 8px 2px 18px; margin: 8px -22px 0; padding-left: 22px; padding-right: 22px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .bilder figure { margin: 0; flex: none; scroll-snap-align: start; text-align: center; }
+  .bilder img { height: 440px; width: auto; border-radius: 26px; box-shadow: 0 14px 40px rgba(0,0,0,.45); border: 1px solid rgba(212,180,131,.25); display: block; }
+  .bilder figcaption { font-size: 14px; opacity: .75; margin-top: 10px; }
+  @media (max-width: 600px) { .bilder img { height: 360px; } }
 </style>
 </head>
 <body>
@@ -68,6 +73,14 @@
       <a href="#datenschutz" data-l="de">Datenschutz</a><a href="#datenschutz" data-l="en">Privacy</a>
       <a href="https://perlage-apps.github.io/#impressum" data-l="de">Impressum</a><a href="https://perlage-apps.github.io/#impressum" data-l="en">Legal notice</a>
     </nav>
+  </section>
+
+  <section class="bilder" aria-label="Bildschirmfotos / Screenshots">
+    <figure><img src="screen1.jpg" alt="Startseite" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Startseite</span><span data-l="en">Home</span></figcaption></figure>
+    <figure><img src="screen2.jpg" alt="Klassiker am Kartentisch" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Klassiker am Kartentisch</span><span data-l="en">Classic card games</span></figcaption></figure>
+    <figure><img src="screen3.jpg" alt="Rommé mit Lernmodus" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Rommé mit Lernmodus</span><span data-l="en">Rummy with learning mode</span></figcaption></figure>
+    <figure><img src="screen4.jpg" alt="Retro-Flipper" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Retro-Flipper</span><span data-l="en">Retro pinball</span></figcaption></figure>
+    <figure><img src="screen5.jpg" alt="Mühle – allein oder zu zweit" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Mühle – allein oder zu zweit</span><span data-l="en">Mill – solo or with friends</span></figcaption></figure>
   </section>
 
   <section id="spiele">
