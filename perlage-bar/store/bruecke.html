@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Übertragung</title></head>
+<body style="font:16px -apple-system,sans-serif;padding:20px">Bitte warten …
+<script>
+(async function(){
+  var L=["Kauf-Pruefung.jpg","iPhone/1-rezept.jpg","iPhone/2-barkeeper.jpg","iPhone/3-gin.jpg","iPhone/4-sammlung.jpg","iPhone/5-partys.jpg","iPhone/6-kinder.jpg","iPhone/7-ginbar.jpg","iPad/1-start.jpg","iPad/2-rezept.jpg","iPad/3-barkeeper.jpg","iPad/4-gin.jpg","iPad/5-sammlung.jpg","iPad/6-ginbar.jpg","iPad/7-kinder.jpg"];
+  var f={};
+  for (var i=0;i<L.length;i++){ var r=await fetch(L[i],{cache:"no-store"}); f[L[i]]=await r.arrayBuffer(); }
+  if (window.opener) window.opener.postMessage({files:f},"https://appstoreconnect.apple.com");
+  document.body.textContent="Fertig: "+L.length+" Dateien übertragen. Dieses Fenster kann geschlossen werden.";
+})();
+</script>
+</body></html>
