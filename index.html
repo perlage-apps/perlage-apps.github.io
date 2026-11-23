@@ -55,7 +55,12 @@ section{padding-block:88px}
 .ueb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border-radius:28px;overflow:hidden;background:#13323C;color:#fff;box-shadow:0 24px 60px rgba(19,50,60,.22)}
 .ueb .txt{padding:clamp(28px,5vw,52px);display:flex;flex-direction:column;align-items:flex-start;gap:18px;min-width:0}
 .ueb .ic{width:72px;height:72px;border-radius:17px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
-.ueb h3{font-family:var(--serif);font-weight:700;letter-spacing:-.015em;font-size:clamp(1.9rem,3.2vw,2.5rem);line-height:1.08;margin:0}
+.ueb h3{font-family:var(--serif);font-weight:700;letter-spacing:-.015em;font-size:clamp(1.5rem,2.5vw,1.95rem);line-height:1.12;margin:0;color:#F3E3C3}
+.app-kopf{display:flex;align-items:center;gap:16px;min-width:0}.app-kopf .ic{flex:none}
+.app-name{margin:0;font-family:var(--serif);font-weight:700;letter-spacing:-.02em;font-size:clamp(2rem,3.6vw,2.7rem);line-height:1.05;color:#fff;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ueb .app-name a{color:#fff;text-decoration:none}.ueb .app-name a:hover{text-decoration:underline}
+.ueb .app-art{margin:6px 0 0;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#D4B483}
+.ueb .unten a.laden{display:inline-block;padding:11px 20px;border-radius:999px;background:linear-gradient(180deg,#F3E3C3,#D4B483);color:#14213D;font-weight:700;text-decoration:none}.ueb .unten a.laden:hover{background:linear-gradient(180deg,#F8EBD2,#DEC293)}
 .ueb p{color:#C6D5D9;margin:0}
 .ueb ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;color:#E6EEF0}
 .ueb li{padding-left:24px;position:relative}
@@ -90,20 +95,21 @@ box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 0 0 6px rgba(212,180,131,.10),0
 .pill::before{content:"";width:7px;height:7px;border-radius:2px;background:currentColor;opacity:.75}
 .raster{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
 .karte{grid-column:span 2;position:relative;display:flex;flex-direction:column;background:var(--weiss);border-radius:24px;overflow:hidden;border:1px solid var(--linie);box-shadow:0 1px 2px rgba(20,33,61,.04),0 10px 28px rgba(20,33,61,.06);transition:transform .25s,box-shadow .25s}
-.karte.gross{grid-column:span 3}
 .karte:hover{transform:translateY(-4px);box-shadow:0 2px 6px rgba(20,33,61,.06),0 20px 40px rgba(20,33,61,.12)}
-.vorschau{height:220px;background:linear-gradient(180deg,var(--o),var(--u));display:flex;align-items:center;justify-content:center;padding:22px}
-.karte.gross .vorschau{height:260px}
+.vorschau{height:250px;background:linear-gradient(180deg,var(--o),var(--u));display:flex;align-items:center;justify-content:center;padding:22px}
+.vorschau.mehrere{gap:12px;padding:20px 16px}.vorschau.mehrere img{max-width:30%;border-radius:10px}
 .vorschau img{max-height:100%;height:auto;width:auto;max-width:100%;object-fit:contain;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.18)}
-.inhalt{padding:0 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
-.inhalt .ic{width:62px;height:62px;border-radius:15px;margin-top:-31px;border:3px solid var(--weiss);box-shadow:0 6px 16px rgba(0,0,0,.14);position:relative}
-.inhalt h3{margin:4px 0 0;font-family:var(--serif);font-weight:700;letter-spacing:-.015em;font-size:1.35rem;line-height:1.15;color:var(--blau)}
+.inhalt{padding:20px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.inhalt .ic{width:64px;height:64px;border-radius:15px;box-shadow:0 6px 16px rgba(0,0,0,.16);flex:none;display:block}
+.inhalt .app-art{flex:none;margin:5px 0 0;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--golddunkel)}
+.inhalt .geschenk-schild{align-self:flex-start;margin-left:0}
+.inhalt h3{margin:0;font-family:var(--serif);font-weight:700;letter-spacing:-.015em;font-size:1.5rem;line-height:1.12;color:var(--blau)}
 .inhalt h3 a{color:inherit;text-decoration:none}
 .inhalt h3 a::after{content:"";position:absolute;inset:0;border-radius:24px}
 .inhalt p{margin:0;color:var(--grau);font-size:15.5px;flex:1}
 .fuss{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
-.store{position:relative;z-index:2;font-size:14px;font-weight:600;color:var(--blau);text-decoration:none;border:1px solid var(--linie);border-radius:999px;padding:9px 15px;background:#fff}
-.store:hover{border-color:var(--gold2)}
+.store{position:relative;z-index:2;font-size:14px;font-weight:700;color:#fff;text-decoration:none;border-radius:999px;padding:10px 17px;background:var(--blau)}
+.store:hover{background:var(--blau2)}
 .mehr{font-size:14px;font-weight:600;color:var(--blau)}
 .platzhalter{display:flex;width:120px;height:120px}.platzhalter svg{width:100%;height:100%}
 .inhalt .ic-svg{display:flex;align-items:center;justify-content:center;background:#fff;padding:12px}.inhalt .ic-svg svg{width:100%;height:100%}
@@ -133,8 +139,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 24px;justify-content:space-bet
 footer a{color:#D6DCE8}
 footer .absender{display:flex;align-items:center;gap:12px}
 footer .absender svg{width:20px;height:auto}
-@media (max-width:960px){.ueb{grid-template-columns:1fr}.karte,.karte.gross{grid-column:span 3}.werte{grid-template-columns:repeat(2,minmax(0,1fr))}.wert:nth-child(3){padding-left:0;border-left:0}.ueber .z{grid-template-columns:1fr;gap:28px}.recht .spalten{grid-template-columns:1fr;gap:28px}}
-@media (max-width:640px){.raster{grid-template-columns:1fr}.karte,.karte.gross{grid-column:auto}.werte{grid-template-columns:1fr}.wert,.wert + .wert{padding-left:0;border-left:0;border-bottom:1px solid var(--linie);padding-bottom:22px}section{padding-block:64px}.logo-gross{flex-direction:column;gap:22px}.logo-gross > svg{width:1.05em}.buehne{padding-top:28px}.kopf nav ul{gap:6px 16px}.kopf nav ul a{font-size:14px}}
+@media (max-width:960px){.ueb{grid-template-columns:1fr}.karte{grid-column:span 3}.werte{grid-template-columns:repeat(2,minmax(0,1fr))}.wert:nth-child(3){padding-left:0;border-left:0}.ueber .z{grid-template-columns:1fr;gap:28px}.recht .spalten{grid-template-columns:1fr;gap:28px}}
+@media (max-width:640px){.raster{grid-template-columns:1fr}.karte{grid-column:auto}.werte{grid-template-columns:1fr}.wert,.wert + .wert{padding-left:0;border-left:0;border-bottom:1px solid var(--linie);padding-bottom:22px}section{padding-block:64px}.logo-gross{flex-direction:column;gap:22px}.logo-gross > svg{width:1.05em}.buehne{padding-top:28px}.kopf nav ul{gap:6px 16px}.kopf nav ul a{font-size:14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.kette i{animation-play-state:paused}.karte,.karte:hover{transition:none;transform:none}}
 </style>
 <link rel="apple-touch-icon" sizes="180x180" href="https://perlage-apps.github.io/apple-touch-icon.png">
@@ -150,7 +156,7 @@ footer .absender svg{width:20px;height:auto}
 <div class="ketten" aria-hidden="true"><div class="kette" style="left:9%"><i style="--g:7px;--t:9.5s;--v:-0.0s"></i><i style="--g:9px;--t:9.5s;--v:-1.58s"></i><i style="--g:6px;--t:9.5s;--v:-3.17s"></i><i style="--g:10px;--t:9.5s;--v:-4.75s"></i><i style="--g:8px;--t:9.5s;--v:-6.33s"></i><i style="--g:7px;--t:9.5s;--v:-7.92s"></i></div><div class="kette" style="left:23%"><i style="--g:5px;--t:7.4s;--v:-0.0s"></i><i style="--g:7px;--t:7.4s;--v:-1.23s"></i><i style="--g:5px;--t:7.4s;--v:-2.47s"></i><i style="--g:6px;--t:7.4s;--v:-3.7s"></i><i style="--g:8px;--t:7.4s;--v:-4.93s"></i><i style="--g:5px;--t:7.4s;--v:-6.17s"></i></div><div class="kette" style="left:77%"><i style="--g:9px;--t:8.6s;--v:-0.0s"></i><i style="--g:12px;--t:8.6s;--v:-1.43s"></i><i style="--g:8px;--t:8.6s;--v:-2.87s"></i><i style="--g:11px;--t:8.6s;--v:-4.3s"></i><i style="--g:10px;--t:8.6s;--v:-5.73s"></i><i style="--g:9px;--t:8.6s;--v:-7.17s"></i></div><div class="kette" style="left:91%"><i style="--g:6px;--t:6.8s;--v:-0.0s"></i><i style="--g:5px;--t:6.8s;--v:-1.13s"></i><i style="--g:7px;--t:6.8s;--v:-2.27s"></i><i style="--g:6px;--t:6.8s;--v:-3.4s"></i><i style="--g:5px;--t:6.8s;--v:-4.53s"></i><i style="--g:7px;--t:6.8s;--v:-5.67s"></i></div></div>
 <div class="wrap">
 <nav aria-label="Hauptnavigation"><a class="marke" href="./" aria-label="Perlage Apps – Startseite"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span><span class="wm-apps">APPS</span></span></span></a>
-<ul><li><a href="#vermieter">Vermieter</a></li><li><a href="#kinder">Kinder</a></li><li><a href="#alltag">Alltag</a></li><li><a href="#ueber">Über uns</a></li><li><a href="#kontakt">Kontakt</a></li></ul></nav>
+<ul><li><a href="#kinder">Kinder</a></li><li><a href="#alltag">Alltag &amp; Freizeit</a></li><li><a href="#ueber">Über uns</a></li><li><a href="#kontakt">Kontakt</a></li></ul></nav>
 <div class="buehne">
 <h1 class="logo-gross" aria-label="Perlage Apps – Your pearl of innovation."><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span><span class="wm-apps">AP<svg class="pp" viewBox="0 -32 76 102" aria-hidden="true"><g fill="currentColor"><rect x="-0.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="39.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="39.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="39.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="49.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="59.5" width="9.2" height="9.2" rx="1.6"/><rect x="54" y="-12" width="6" height="6" rx="1" fill-opacity=".55"/><rect x="64" y="-28" width="5" height="5" rx="1" fill-opacity=".35"/></g></svg>S</span></span><span class="slogan">Your pearl of innovation.</span></span></h1>
 <p class="leitsatz">Kleine Apps, <em>mit Sorgfalt</em> gemacht.</p>
@@ -160,92 +166,86 @@ footer .absender svg{width:20px;height:auto}
 <svg class="welle" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C240,62 480,0 720,24 C960,48 1200,8 1440,28 L1440,56 L0,56 Z" fill="#F7F3EA"/></svg>
 </header>
 
-<div class="geschenk-platz" data-geschenk><div class="wrap"><aside class="geschenk-band" aria-label="Weihnachtsgeschenk">
+<div class="geschenk-platz" data-geschenk><div class="wrap"><aside class="geschenk-band" aria-label="Kostenlose Testphase bis 31.12.">
 <span class="funkeln" aria-hidden="true"><i style="--x:8%;--y:22%;--d:0s"></i><i style="--x:21%;--y:72%;--d:1.2s"></i><i style="--x:47%;--y:14%;--d:2.1s"></i><i style="--x:63%;--y:80%;--d:.6s"></i><i style="--x:84%;--y:26%;--d:1.7s"></i><i style="--x:93%;--y:68%;--d:2.6s"></i></span>
 <div class="gb-zeichen"><svg class="schleife" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3E3C3"/><stop offset=".5" stop-color="#D4B483"/><stop offset="1" stop-color="#A9844A"/></linearGradient></defs><g fill="none" stroke="url(#gg)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="7" y="20" width="34" height="22" rx="3"/><path d="M5 14h38v6H5z"/><path d="M24 14v28"/><path d="M24 14c-3-6-11-9-12-4s7 4 12 4zM24 14c3-6 11-9 12-4s-7 4-12 4z"/></g></svg></div>
-<div class="gb-text"><p class="gb-label">Unser Weihnachtsgeschenk</p>
-<p class="gb-titel">Alle Pino-Apps bis 31.12. geschenkt.</p>
-<p class="gb-satz">Alle Inhalte frei – ohne Abo, ohne Kauf. Was Kinder bis dahin malen und sammeln, bleibt für immer. Dazu alle Pro-Funktionen von Paperlo.</p></div>
-<a class="gb-knopf" href="#kinder">Zu den Pino-Apps</a>
+<div class="gb-text"><p class="gb-label">Zum Start: die extra lange Testphase</p>
+<p class="gb-titel">Alle Perlage-Apps bis 31.12. kostenlos testen.</p>
+<p class="gb-satz">In Ruhe alles ausprobieren – ohne Abo, ohne Kauf, ohne Verpflichtung. Erst ab 1. Januar 2027 entscheidest du, ob du die Vollversion möchtest. Was bis dahin gemalt, gesammelt und gespeichert wurde, bleibt erhalten.</p></div>
+<a class="gb-knopf" href="#apps">Apps entdecken</a>
 </aside></div></div>
 
 <main id="apps">
-<section id="vermieter"><div class="wrap">
-<div class="titel"><div><p class="label">Für Vermieter</p><h2>Übergably</h2></div><p>Die App für Wohnungsübergaben und Verwaltung – auf iPhone, iPad und Mac.</p></div>
-<article class="ueb">
-<div class="txt"><img class="ic" src="bilder/uebergably.jpg" alt="App-Symbol Übergably" width="72" height="72">
-<h3>Übergeben. Unterschreiben. Erledigt.</h3>
-<p>Wohnungsübergaben ohne Papierkram: Protokoll mit Fotos, Zählerständen und Unterschriften – für Vermieter.</p>
-<ul><li>Raum für Raum mit Fotos und Zählerständen</li><li>Unterschrift auf dem Gerät, PDF sofort an alle</li><li>Mieter, Dokumente und Nebenkosten an einem Ort</li></ul>
-<div class="unten"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a href="https://apps.apple.com/de/app/id6835570878">Im App Store laden</a><a href="uebergably/">Mehr über Übergably →</a></div></div>
-<div class="bild"><img src="uebergably/haus.jpg" alt="Hausübersicht in Übergably" width="660" height="1434" loading="lazy"><img src="uebergably/protokoll.jpg" alt="Abgeschlossenes Einzugsprotokoll" width="660" height="1434" loading="lazy"><img src="uebergably/pdf.jpg" alt="PDF-Vorschau eines Protokolls" width="660" height="1434" loading="lazy"></div>
-</article>
-</div></section>
-
-<section id="kinder" style="padding-top:0"><div class="wrap">
+<section id="kinder"><div class="wrap">
 <div class="titel"><div><p class="label">Für Kinder</p><h2>Pinos Welt</h2></div><p>Pino, der kleine Pinguin, begleitet Kinder von 1 bis 10 beim Malen, Rechnen, Lernen und Spielen – sicher hinter der Elternfrage.</p></div>
 <div class="raster">
-<article class="karte gross" style="--o:#9ED1F7;--u:#E0F2FF">
+<article class="karte" style="--o:#9ED1F7;--u:#E0F2FF">
 <div class="vorschau"><img src="pino-malt/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/pino-malt.jpg" alt="App-Symbol Pino malt" width="62" height="62">
-<h3><a href="pino-malt/">Pino malt</a><span class="geschenk-schild" data-geschenk>Bis 31.12. geschenkt</span></h3><p>Malen und Ausmalen mit Pino, dem kleinen Pinguin – auf echtem DIN-A4-Blatt, ohne Werbung.</p>
-<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/app/pino-malt/id6827597680">Im App Store ansehen</a></div></div></article>
-<article class="karte gross" style="--o:#9ED1F7;--u:#E0F2FF">
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/pino-malt.jpg" alt="App-Symbol Pino malt" width="64" height="64">
+<div><h3><a href="pino-malt/">Pino malt</a></h3><p class="app-art">Malen &amp; Ausmalen · ab 3 Jahren</p></div></div>
+<p>Malen und Ausmalen mit Pino, dem kleinen Pinguin – auf echtem DIN-A4-Blatt, ohne Werbung.</p><span class="geschenk-schild" data-geschenk>Bis 31.12. gratis testen</span>
+<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/app/pino-malt/id6827597680">Im App Store laden</a></div></div></article>
+<article class="karte" style="--o:#9ED1F7;--u:#E0F2FF">
 <div class="vorschau"><img src="pino-spielt/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/pino-spielt.jpg" alt="App-Symbol Pino spielt" width="62" height="62">
-<h3><a href="pino-spielt/">Pino spielt</a><span class="geschenk-schild" data-geschenk>Bis 31.12. geschenkt</span></h3><p>Zehn Mini-Spiele mit dem Pinguin Pino in fünf Welten – für Kinder von 4 bis 8, ohne Werbung.</p>
-<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6831372750">Im App Store ansehen</a></div></div></article>
-<article class="karte gross" style="--o:#FFBA8F;--u:#FFF0DB">
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/pino-spielt.jpg" alt="App-Symbol Pino spielt" width="64" height="64">
+<div><h3><a href="pino-spielt/">Pino spielt</a></h3><p class="app-art">10 Mini-Spiele · 4–8 Jahre</p></div></div>
+<p>Zehn Mini-Spiele mit dem Pinguin Pino in fünf Welten – für Kinder von 4 bis 8, ohne Werbung.</p><span class="geschenk-schild" data-geschenk>Bis 31.12. gratis testen</span>
+<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6831372750">Im App Store laden</a></div></div></article>
+<article class="karte" style="--o:#FFBA8F;--u:#FFF0DB">
 <div class="vorschau"><img src="pino-doodle/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/pino-doodle.jpg" alt="App-Symbol Pino Doodle" width="62" height="62">
-<h3><a href="pino-doodle/">Pino Doodle</a><span class="geschenk-schild" data-geschenk>Bis 31.12. geschenkt</span></h3><p>Die erste Mal-App für Kinder von 1 bis 4: dicke Wachsmalstifte, 150 Ausmalbilder und Pino, der Pinguin.</p>
-<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6830373938">Im App Store ansehen</a></div></div></article>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/pino-doodle.jpg" alt="App-Symbol Pino Doodle" width="64" height="64">
+<div><h3><a href="pino-doodle/">Pino Doodle</a></h3><p class="app-art">Erstes Malen · 1–4 Jahre</p></div></div>
+<p>Die erste Mal-App für Kinder von 1 bis 4: dicke Wachsmalstifte, 150 Ausmalbilder und Pino, der Pinguin.</p><span class="geschenk-schild" data-geschenk>Bis 31.12. gratis testen</span>
+<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6830373938">Im App Store laden</a></div></div></article>
 <article class="karte" style="--o:#091C33;--u:#0E5A8A">
 <div class="vorschau"><img src="pino-rechnet/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/pino-rechnet.jpg" alt="App-Symbol Pino rechnet" width="62" height="62">
-<h3><a href="pino-rechnet/">Pino rechnet</a><span class="geschenk-schild" data-geschenk>Bis 31.12. geschenkt</span></h3><p>Mit Pinguin Pino durch die Grundschul-Mathe: 63 Inseln von Klasse 1 bis 4 – ohne Werbung, ohne Datensammlung.</p>
-<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Ansehen →</span></div></div></article>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/pino-rechnet.jpg" alt="App-Symbol Pino rechnet" width="64" height="64">
+<div><h3><a href="pino-rechnet/">Pino rechnet</a></h3><p class="app-art">Mathe Klasse 1–4 · Grundschule</p></div></div>
+<p>Mit Pinguin Pino durch die Grundschul-Mathe: 63 Inseln von Klasse 1 bis 4 – ohne Werbung, ohne Datensammlung.</p><span class="geschenk-schild" data-geschenk>Bis 31.12. gratis testen</span>
+<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Mehr erfahren →</span></div></div></article>
 <article class="karte" style="--o:#9ED1F7;--u:#E0F2FF">
 <div class="vorschau"><img src="pino-vorschule/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/pino-vorschule.jpg" alt="App-Symbol Pino Vorschule" width="62" height="62">
-<h3><a href="pino-vorschule/">Pino Vorschule</a><span class="geschenk-schild" data-geschenk>Bis 31.12. geschenkt</span></h3><p>Spielend lernen mit Pino, dem kleinen Pinguin – für Kita-Kinder von 3 bis 6, ganz ohne Lesen.</p>
-<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Ansehen →</span></div></div></article>
-</div>
-</div></section>
-
-<section id="spiele" style="padding-top:0"><div class="wrap">
-<div class="titel"><div><p class="label">Zum Spielen</p><h2>Perlage Games</h2></div><p>25 Klassiker in einer ruhigen, edlen App – allein, gegen den Computer oder mit Freunden.</p></div>
-<div class="raster">
-<article class="karte gross" style="--o:#0E4D39;--u:#1E3428">
-<div class="vorschau"><img src="perlage-games/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/perlage-games.jpg" alt="App-Symbol Perlage Games" width="62" height="62">
-<h3><a href="perlage-games/">Perlage Games</a></h3><p>Rommé, Skat, Doppelkopf, Patiencen, Schach, Mühle, Mahjong, Flipper und mehr – mit täglicher Herausforderung, ohne Konto und ohne fremde Werbung.</p>
-<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6835851725">Im App Store ansehen</a></div></div></article>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/pino-vorschule.jpg" alt="App-Symbol Pino Vorschule" width="64" height="64">
+<div><h3><a href="pino-vorschule/">Pino Vorschule</a></h3><p class="app-art">Spielend lernen · 3–6 Jahre</p></div></div>
+<p>Spielend lernen mit Pino, dem kleinen Pinguin – für Kita-Kinder von 3 bis 6, ganz ohne Lesen.</p><span class="geschenk-schild" data-geschenk>Bis 31.12. gratis testen</span>
+<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Mehr erfahren →</span></div></div></article>
 </div>
 </div></section>
 
 <section id="alltag" style="padding-top:0"><div class="wrap">
-<div class="titel"><div><p class="label">Für den Alltag</p><h2>Apps für jeden Tag</h2></div><p>Kleine Helfer für Papierkram, Freunde und alles dazwischen.</p></div>
+<div class="titel"><div><p class="label">Für Alltag und Freizeit</p><h2>Apps für jeden Tag</h2></div><p>Für Vermieter, Papierkram, Spieleabende, Freunde und die nächste Feier.</p></div>
 <div class="raster">
-<article class="karte gross" style="--o:#3B2914;--u:#1C140C">
+<article class="karte" id="vermieter" style="--o:#1B4652;--u:#0D232A">
+<div class="vorschau mehrere"><img src="uebergably/haus.jpg" alt="Hausübersicht in Übergably" loading="lazy"><img src="uebergably/protokoll.jpg" alt="Abgeschlossenes Einzugsprotokoll" loading="lazy"><img src="uebergably/pdf.jpg" alt="PDF-Vorschau eines Protokolls" loading="lazy"></div>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/uebergably.jpg" alt="App-Symbol Übergably" width="64" height="64">
+<div><h3><a href="uebergably/">Übergably</a></h3><p class="app-art">Für Vermieter · iPhone, iPad, Mac</p></div></div>
+<p>Wohnungsübergaben ohne Papierkram: Protokoll mit Fotos, Zählerständen und Unterschriften – für Vermieter.</p>
+<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6835570878">Im App Store laden</a></div></div></article>
+<article class="karte" id="spiele" style="--o:#0E4D39;--u:#1E3428">
+<div class="vorschau"><img src="perlage-games/bild1.jpg" alt="" loading="lazy"></div>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/perlage-games.jpg" alt="App-Symbol Perlage Games" width="64" height="64">
+<div><h3><a href="perlage-games/">Perlage Games</a></h3><p class="app-art">25 Spieleklassiker · iPhone, iPad</p></div></div>
+<p>Rommé, Skat, Doppelkopf, Patiencen, Schach, Mühle, Mahjong, Flipper und mehr – mit täglicher Herausforderung, ohne Konto und ohne fremde Werbung.</p>
+<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/id6835851725">Im App Store laden</a></div></div></article>
+<article class="karte" style="--o:#3B2914;--u:#1C140C">
 <div class="vorschau"><img src="ehrenmann/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/ehrenmann.jpg" alt="App-Symbol Ehrenmann" width="62" height="62">
-<h3><a href="ehrenmann/">Ehrenmann</a><span class="ab18">ab 18</span></h3><p>Ehre sammeln, Prost teilen: Punkte für alles, was du für deine Liebsten tust – und Freunde sehen, wo du anstößt.</p>
-<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/ehrenmann-ehrenfrau/id6828551543">Im App Store ansehen</a></div></div></article>
-<article class="karte gross" style="--o:#FBE7E4;--u:#FFF8F6">
-<div class="vorschau"><img src="scan/bild1.jpg" alt="" loading="lazy"></div>
-<div class="inhalt"><img class="ic" src="bilder/scan.jpg" alt="App-Symbol Paperlo" width="62" height="62">
-<h3><a href="scan/">Paperlo</a><span class="geschenk-schild" data-geschenk>Bis 31.12. geschenkt</span></h3><p>Dein PDF-Buddy: PDFs verkleinern, scannen, importieren und ordnen – direkt auf dem iPhone, ohne Konto und Werbung.</p>
-<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Ansehen →</span></div></div></article>
-</div>
-<article class="ueb bar">
-<div class="txt"><svg viewBox="0 0 120 120" role="img" aria-label="App-Symbol Perlage Bar" class="ic" width="72" height="72"><rect width="120" height="120" rx="27" fill="#14181D"/><path d="M34 44h52l-26 30z" fill="#E9A23B"/><path d="M30 42h60" stroke="#F5EFE6" stroke-width="3" stroke-linecap="round"/><path d="M30 42l30 34 30-34M60 76v22M46 98h28" stroke="#F5EFE6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="30" r="2.2" fill="#E9A23B"/><circle cx="64" cy="22" r="1.6" fill="#E9A23B"/><circle cx="55" cy="16" r="1.2" fill="#E9A23B"/></svg>
-<h3>Mixen wie an der Bar.</h3>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/ehrenmann.jpg" alt="App-Symbol Ehrenmann" width="64" height="64">
+<div><h3><a href="ehrenmann/">Ehrenmann</a><span class="ab18">ab 18</span></h3><p class="app-art">Für Freunde · iPhone</p></div></div>
+<p>Ehre sammeln, Prost teilen: Punkte für alles, was du für deine Liebsten tust – und Freunde sehen, wo du anstößt.</p>
+<div class="fuss"><span class="pill" style="--f:#2E7D5B">Im App Store</span><a class="store" href="https://apps.apple.com/de/app/ehrenmann-ehrenfrau/id6828551543">Im App Store laden</a></div></div></article>
+<article class="karte" style="--o:#2A2F38;--u:#0F1317">
+<div class="vorschau mehrere"><img src="perlage-bar/store/iPhone/1-rezept.jpg" alt="Rezept in Perlage Bar" loading="lazy"><img src="perlage-bar/store/iPhone/2-barkeeper.jpg" alt="Barkeeper-Modus" loading="lazy"><img src="perlage-bar/store/iPhone/6-kinder.jpg" alt="Kinder-Drinks" loading="lazy"></div>
+<div class="inhalt"><div class="app-kopf"><svg viewBox="0 0 120 120" role="img" aria-label="App-Symbol Perlage Bar" class="ic" width="72" height="72"><rect width="120" height="120" rx="27" fill="#14181D"/><path d="M34 44h52l-26 30z" fill="#E9A23B"/><path d="M30 42h60" stroke="#F5EFE6" stroke-width="3" stroke-linecap="round"/><path d="M30 42l30 34 30-34M60 76v22M46 98h28" stroke="#F5EFE6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="30" r="2.2" fill="#E9A23B"/><circle cx="64" cy="22" r="1.6" fill="#E9A23B"/><circle cx="55" cy="16" r="1.2" fill="#E9A23B"/></svg>
+<div><h3><a href="perlage-bar/">Perlage Bar</a><span class="ab18">ab 18</span></h3><p class="app-art">Cocktails &amp; Partys · iPhone, iPad</p></div></div>
 <p>Cocktails entdecken, die Party planen, Schritt für Schritt mixen und den Gästen die Karte zeigen – auf iPhone und iPad.</p>
-<ul><li>Barkeeper-Modus: große Knöpfe, ein Schritt nach dem anderen</li><li>Partys planen und die Karte des Abends teilen</li><li>Eigene Ecke für Kinder-Drinks ohne Alkohol</li></ul>
-<div class="unten"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="ab18">ab 18</span><a href="perlage-bar/">Mehr über Perlage Bar →</a></div></div>
-<div class="bild"><img src="perlage-bar/store/iPhone/1-rezept.jpg" alt="Rezept in Perlage Bar" width="603" height="1311" loading="lazy"><img src="perlage-bar/store/iPhone/2-barkeeper.jpg" alt="Barkeeper-Modus" width="603" height="1311" loading="lazy"><img src="perlage-bar/store/iPhone/6-kinder.jpg" alt="Kinder-Drinks" width="603" height="1311" loading="lazy"></div>
-</article>
+<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Mehr erfahren →</span></div></div></article>
+<article class="karte" style="--o:#FBE7E4;--u:#FFF8F6">
+<div class="vorschau"><img src="scan/bild1.jpg" alt="" loading="lazy"></div>
+<div class="inhalt"><div class="app-kopf"><img class="ic" src="bilder/scan.jpg" alt="App-Symbol Paperlo" width="64" height="64">
+<div><h3><a href="scan/">Paperlo</a></h3><p class="app-art">PDF-Helfer · iPhone, iPad</p></div></div>
+<p>Dein PDF-Buddy: PDFs verkleinern, scannen, importieren und ordnen – direkt auf dem iPhone, ohne Konto und Werbung.</p><span class="geschenk-schild" data-geschenk>Bis 31.12. gratis testen</span>
+<div class="fuss"><span class="pill" style="--f:#9A6B12">Bei Apple in Prüfung</span><span class="mehr" aria-hidden="true">Mehr erfahren →</span></div></div></article>
+</div>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
