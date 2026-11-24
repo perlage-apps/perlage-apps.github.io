@@ -45,11 +45,6 @@
   footer { margin-top: 56px; font-size: 14px; opacity: .7; text-align: center; }
   [data-l] { display: none; }
   html[lang="de"] [data-l="de"], html[lang="en"] [data-l="en"] { display: revert; }
-  .bilder { display: flex; gap: 16px; overflow-x: auto; padding: 8px 2px 18px; margin: 8px -22px 0; padding-left: 22px; padding-right: 22px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-  .bilder figure { margin: 0; flex: none; scroll-snap-align: start; text-align: center; }
-  .bilder img { height: 440px; width: auto; border-radius: 26px; box-shadow: 0 14px 40px rgba(0,0,0,.45); border: 1px solid rgba(212,180,131,.25); display: block; }
-  .bilder figcaption { font-size: 14px; opacity: .75; margin-top: 10px; }
-  @media (max-width: 600px) { .bilder img { height: 360px; } }
 </style>
 </head>
 <body>
@@ -73,14 +68,6 @@
       <a href="#datenschutz" data-l="de">Datenschutz</a><a href="#datenschutz" data-l="en">Privacy</a>
       <a href="https://perlage-apps.github.io/#impressum" data-l="de">Impressum</a><a href="https://perlage-apps.github.io/#impressum" data-l="en">Legal notice</a>
     </nav>
-  </section>
-
-  <section class="bilder" aria-label="Bildschirmfotos / Screenshots">
-    <figure><img src="screen1.jpg" alt="Startseite" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Startseite</span><span data-l="en">Home</span></figcaption></figure>
-    <figure><img src="screen2.jpg" alt="Klassiker am Kartentisch" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Klassiker am Kartentisch</span><span data-l="en">Classic card games</span></figcaption></figure>
-    <figure><img src="screen3.jpg" alt="Rommé mit Lernmodus" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Rommé mit Lernmodus</span><span data-l="en">Rummy with learning mode</span></figcaption></figure>
-    <figure><img src="screen4.jpg" alt="Retro-Flipper" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Retro-Flipper</span><span data-l="en">Retro pinball</span></figcaption></figure>
-    <figure><img src="screen5.jpg" alt="Mühle – allein oder zu zweit" width="660" height="1434" loading="lazy"><figcaption><span data-l="de">Mühle – allein oder zu zweit</span><span data-l="en">Mill – solo or with friends</span></figcaption></figure>
   </section>
 
   <section id="spiele">
@@ -124,7 +111,7 @@
   <section id="support">
     <h2>Support</h2>
     <div class="card" data-l="de">
-      <p>Fragen, Ideen oder ein Fehler gefunden? Schreib uns an <a href="mailto:info.perlage-apps@web.de?subject=Feedback%20zu%20Perlage%20Games">info.perlage-apps@web.de</a>.</p>
+      <p>Fragen, Ideen oder ein Fehler gefunden? Schreib uns an <a href="mailto:info@perlage-apps.de?subject=Feedback%20zu%20Perlage%20Games">info@perlage-apps.de</a>.</p>
       <h3>Wie spiele ich mit jemandem zusammen?</h3>
       <p>Öffne ein Brettspiel (Four in a Row, Reversi, Dame, Mühle oder Schach) und wähle: auf diesem Gerät, gegen den Computer, in der Nähe, online oder SharePlay.</p>
       <h3>Warum fragt die App nach dem lokalen Netzwerk?</h3>
@@ -141,7 +128,7 @@
       <p>Fortschritt und Statistik liegen nur auf deinem Gerät. Wenn du die App löschst, sind sie weg.</p>
     </div>
     <div class="card" data-l="en">
-      <p>Questions, ideas or found a bug? Write to us at <a href="mailto:info.perlage-apps@web.de?subject=Feedback%20on%20Perlage%20Games">info.perlage-apps@web.de</a>.</p>
+      <p>Questions, ideas or found a bug? Write to us at <a href="mailto:info@perlage-apps.de?subject=Feedback%20on%20Perlage%20Games">info@perlage-apps.de</a>.</p>
       <h3>How do I play with someone?</h3>
       <p>Open a board game (Four in a Row, Reversi, Checkers, Mill or Chess) and choose: on this device, against the computer, nearby, online or SharePlay.</p>
       <h3>Why does the app ask for local network access?</h3>
@@ -163,7 +150,7 @@
     <h2 data-l="de">Datenschutzerklärung</h2><h2 data-l="en">Privacy Policy</h2>
     <div class="card" data-l="de">
       <h3>Verantwortlicher</h3>
-      <p>Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a></p>
+      <p>Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info@perlage-apps.de">info@perlage-apps.de</a></p>
       <h3>Keine Erhebung personenbezogener Daten</h3>
       <p>Perlage Games erhebt, speichert und überträgt keine personenbezogenen Daten. Es gibt kein Benutzerkonto bei uns, keine fremde Werbung, kein Tracking und keine Analyse- oder Statistikdienste. Wir betreiben keine eigenen Server. Hinweise auf weitere Apps von Perlage Apps werden über den App Store von Apple angezeigt; dabei erheben wir keine Daten.</p>
       <h3>Speicherung auf dem Gerät</h3>
@@ -192,7 +179,7 @@
     <div class="card" data-l="en">
       <p class="muted">This is a translation for your convenience. The German version is legally binding.</p>
       <h3>Controller</h3>
-      <p>Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Germany, email: <a href="mailto:info.perlage-apps@web.de">info.perlage-apps@web.de</a></p>
+      <p>Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Germany, email: <a href="mailto:info@perlage-apps.de">info@perlage-apps.de</a></p>
       <h3>No collection of personal data</h3>
       <p>Perlage Games does not collect, store or transmit any personal data. There is no user account with us, no third-party advertising, no tracking and no analytics or statistics services. We do not operate our own servers. Notes about other apps from Perlage Apps are shown via Apple's App Store; we do not collect any data in doing so.</p>
       <h3>Storage on the device</h3>
