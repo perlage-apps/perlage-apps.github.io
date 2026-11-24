@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Perlage Apps – Apps und Internetseiten, mit Sorgfalt gemacht</title>
-<meta name="description" content="Perlage Apps aus Wunstorf entwickelt Apps für iPhone, iPad und Mac und baut schlichte, schnelle Internetseiten für kleine Betriebe und Vereine.">
+<title>Perlage – The pearl of innovation.</title>
+<meta name="description" content="Perlage aus Wunstorf entwickelt Apps für iPhone, iPad und Mac und gestaltet hochwertige Internetseiten und Apps für Unternehmen, Vereine und Selbstständige.">
 <link rel="icon" href="logo/favicon.svg">
 <style>
 :root{--blau:#14213D;--blau2:#1D2F55;--gold:#D4B483;--gold2:#B8955C;--golddunkel:#7E5F28;--perl:#F7F3EA;--weiss:#FFFDF8;--text:#1C2433;--grau:#545E70;--linie:#E7DDC9;
---serif:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;--wm-schrift:#F7F3EA;--wm-gold:#D4B483;color-scheme:light}
+--serif:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;--wm-schrift:#F7F3EA;--wm-gold:#D4B483;--goldglanz:linear-gradient(#D4B483,#D4B483);color-scheme:light}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--perl);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:var(--golddunkel)}a:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:6px}
@@ -20,16 +20,18 @@ h2{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,4.2vw,2.9rem);l
 .wm{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1}
 .wm-zeile{display:flex;align-items:baseline;gap:.24em;white-space:nowrap}
 .wm-perlage{font-family:var(--sans);font-weight:600;font-size:1em;letter-spacing:-.025em;color:var(--wm-schrift)}
-.wm-apps{font-family:var(--sans);font-weight:500;font-size:.36em;letter-spacing:.42em;color:var(--wm-gold)}
+.wm-apps{font-family:var(--sans);font-weight:600;font-size:.36em;letter-spacing:.42em;color:var(--wm-gold);background:var(--goldglanz);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .wm-apps .pp{display:inline-block;width:.8em;height:1.067em;vertical-align:baseline;margin-right:.153em;color:var(--wm-gold)}
-.slogan{margin-top:.3em;font-family:var(--sans);font-weight:400;font-size:max(14px,.215em);letter-spacing:.02em;color:var(--wm-schrift);opacity:.78}
+.wm-apps.wm-web{letter-spacing:.16em!important}.wm-apps.wm-web .pp{margin-right:-.2em;margin-left:0}
+.slogan .slogan-gold{font-weight:600;background:var(--goldglanz);-webkit-background-clip:text;background-clip:text;color:transparent}
+.slogan{margin-top:.34em;font-family:var(--sans);font-weight:400;font-size:max(15px,.25em);letter-spacing:.035em;color:var(--wm-schrift)}
 
 /* Kopf */
 .kopf{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1000px 560px at 50% 38%,#25386A 0%,rgba(37,56,106,0) 66%),var(--blau)}
 .kopf nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding-block:18px}
 .marke{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:25px}
 .marke svg{width:26px;height:auto}
-.marke .wm-apps{font-size:.46em;letter-spacing:.36em}
+.marke .wm-apps{font-size:.54em;letter-spacing:.3em}
 .kopf nav ul{display:flex;gap:6px 24px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 .kopf nav ul a{color:#D6DCE8;text-decoration:none;font-size:15px}
 .kopf nav ul a:hover{color:#fff}
@@ -37,7 +39,7 @@ h2{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,4.2vw,2.9rem);l
 .logo-gross{display:flex;align-items:center;justify-content:center;gap:clamp(18px,4vw,48px);flex-wrap:wrap;margin:0 0 44px;font-size:clamp(58px,10vw,124px);font-weight:400}
 .logo-gross > svg{width:1.45em;height:auto;filter:drop-shadow(0 16px 36px rgba(0,0,0,.35))}
 .buehne .leitsatz{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;font-size:clamp(1.7rem,3.8vw,2.5rem);line-height:1.1;margin:0 0 14px;color:#fff;text-wrap:balance}
-.buehne .leitsatz em{font-style:normal;color:var(--gold)}
+.buehne .leitsatz em{font-style:normal;background:var(--goldglanz);-webkit-background-clip:text;background-clip:text;color:transparent}
 .buehne p{font-size:1.1rem;color:#C8D0DE;max-width:36em;margin:0 0 28px}
 .knoepfe{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .k1,.k2{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px}
@@ -145,9 +147,128 @@ footer .absender svg{width:20px;height:auto}
 @media (max-width:640px){.raster{grid-template-columns:1fr}.karte,.raster.zwei .karte{grid-column:auto}.werte{grid-template-columns:1fr}.wert,.wert + .wert{padding-left:0;border-left:0;border-bottom:1px solid var(--linie);padding-bottom:22px}section{padding-block:64px}.logo-gross{flex-direction:column;gap:22px}.logo-gross > svg{width:1.05em}.buehne{padding-top:28px}.kopf nav ul{gap:6px 16px}.kopf nav ul a{font-size:14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.kette i{animation-play-state:paused}.karte,.karte:hover{transition:none;transform:none}}
 
-.kopf nav ul a[aria-current]{color:#fff;box-shadow:0 2px 0 var(--gold)}
+.kopf nav ul a[aria-current]{color:#fff;box-shadow:0 2px 0 var(--wm-gold)}
+.schwebt{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.16,1,.3,1)!important}
+.schwebt.da{opacity:1;transform:none}
+.schwebt.da.karte:hover,.schwebt.da.bereich:hover{transform:translateY(-4px);transition-duration:.3s!important}
+/* Apple-artige Textlinks statt runder Knöpfe */
+.k1,.k2,.sprung a,.mail,.store,.ueb .unten a.laden,.gb-knopf{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important;min-height:0!important;font-weight:500!important;text-decoration:none!important}
+.k1::after,.k2::after,.sprung a::after,.mail::after,.store::after,.ueb .unten a.laden::after,.gb-knopf::after ,.leer-x{content:" \203A";display:inline-block;margin-left:.25em;transition:transform .25s}
+.k1:hover::after,.k2:hover::after,.sprung a:hover::after,.mail:hover::after,.store:hover::after,.gb-knopf:hover::after{transform:translateX(4px)}
+.k1,.k2{font-size:19px!important;color:var(--wm-gold)!important}.k2{color:#fff!important}
+.knoepfe{gap:10px 34px!important}
+.sprung{gap:8px 28px!important}.sprung a{font-size:16px!important;color:#E6EBF3!important}.sprung a:hover{color:var(--wm-gold)!important}
+.mail{font-size:clamp(1.05rem,2vw,1.3rem)!important;color:var(--golddunkel)!important}
+.store{font-size:15px!important;color:var(--golddunkel)!important}
+.ueb .unten a.laden{color:var(--wm-gold)!important;font-size:17px}
+.gb-knopf{color:#F3E3C3!important;font-size:17px!important}
+.k1:hover,.k2:hover,.mail:hover,.store:hover,.ueb .unten a.laden:hover,.gb-knopf:hover{text-decoration:underline!important;text-underline-offset:4px}
+@keyframes auftauchen{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.buehne > *{animation:auftauchen .9s cubic-bezier(.16,1,.3,1) both}
+.buehne > :nth-child(2){animation-delay:.12s}.buehne > :nth-child(3){animation-delay:.22s}.buehne > :nth-child(4){animation-delay:.32s}.buehne > :nth-child(5){animation-delay:.4s}
+.buehne{will-change:transform,opacity}
+.runter{display:flex;flex-direction:column;align-items:center;gap:7px;margin-top:10px;padding:10px;text-decoration:none}
+.runter i{width:7px;height:7px;border-radius:2px;background:var(--wm-gold);opacity:.2;animation:perle 2.4s ease-in-out infinite}
+.runter i:nth-child(2){animation-delay:.3s}.runter i:nth-child(3){animation-delay:.6s}
+@keyframes perle{0%,100%{opacity:.15;transform:translateY(-4px)}50%{opacity:.95;transform:translateY(4px)}}
+.bereich{overflow:hidden}
+.bereich > *{position:relative;z-index:1}
+.bereich .deko{position:absolute;z-index:0;right:-18px;bottom:-30px;width:210px;opacity:.13;pointer-events:none}
+.bereich .deko svg{width:100%;height:auto;display:block}
+.bereich:not(.dunkel) .deko svg g{fill:#B8955C}
+.sparte{margin:0;font-size:40px;--wm-schrift:var(--blau)}
+.sparte .wm-apps{font-size:.52em;letter-spacing:.34em}
+.bereich.dunkel .sparte{--wm-schrift:#F7F3EA}
+.marke .wm-apps{font-size:.54em;letter-spacing:.3em}
+.marke .wm-apps .pp{color:var(--wm-gold)}
+.preis-bereich .titel h2{color:#fff}.preis-bereich .titel p{color:#C8D0DE}.preis-bereich .label{color:var(--wm-gold)}
+.preis-bereich .preis-fuss{color:#C8D0DE}
+/* Anfrage-Formular */
+.anfrage-form{max-width:860px;margin:0 auto}
+.thema{margin:0 0 44px;padding:0;min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+.thema-titel{margin:0 0 16px!important}
+.thema label{position:relative;display:block;background:var(--blau);cursor:pointer}
+.thema input{position:absolute;opacity:0}
+.thema span{display:block;padding:20px 22px;color:#D6DCE8;font-size:16px;transition:background .25s,color .25s}
+.thema input:checked + span{background:rgba(212,180,131,.12);color:#fff;box-shadow:inset 0 0 0 1px var(--gold)}
+.thema input:focus-visible + span{outline:2px solid var(--gold);outline-offset:-4px}
+.felder{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 30px}
+.feld{display:flex;flex-direction:column;gap:8px;font-size:14px;color:#B9C2D0}.feld i{font-style:normal;opacity:.6}
+.feld.breit{grid-column:1/-1}
+.feld input,.feld textarea{background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.3);color:#fff;font:inherit;font-size:18px;padding:10px 0;outline:none;border-radius:0;transition:border-color .25s}
+.feld textarea{border:1px solid rgba(255,255,255,.3);padding:14px 16px;resize:vertical;min-height:160px}
+.feld input:focus,.feld textarea:focus{border-color:var(--gold)}
+.feld textarea::placeholder{color:rgba(255,255,255,.4)}
+.fehler{color:#F3B4A8;margin:20px 0 0}
+.senden{display:flex;flex-wrap:wrap;align-items:center;gap:14px 36px;margin-top:36px}
+.senden button,.fertig button{background:none;border:0;padding:0;color:var(--gold);font:inherit;font-size:21px;font-weight:600;cursor:pointer}
+.senden button::after,.fertig button::after{content:" \203A"}.senden button:hover,.fertig button:hover{text-decoration:underline;text-underline-offset:5px}
+.senden .fein,.fertig p{color:#B9C2D0;font-size:14px;max-width:34em;margin:0}
+.fertig{max-width:860px;margin:0 auto}.fertig p{font-size:17px;margin:0 0 12px;max-width:none}
+.brief{white-space:pre-wrap;font:15px/1.6 ui-monospace,Menlo,monospace;color:#E8ECF3;border:1px solid rgba(255,255,255,.2);padding:22px;margin:24px 0;overflow-x:auto}
+.aktionen{display:flex;gap:20px 34px;flex-wrap:wrap;align-items:center}.nochmal{color:#D6DCE8;text-decoration:none}.nochmal::after{content:" \203A"}
+@media (max-width:640px){.felder{grid-template-columns:1fr}.thema{grid-template-columns:1fr}}
+.ueb{position:relative}.ueb .app-name a::after{content:"";position:absolute;inset:0;z-index:1}
+.ueb .unten a,.ueb .unten span,.ueb .gin-box{position:relative;z-index:2}
+.ueb:hover{outline:1px solid var(--gold);outline-offset:-1px}
+.paket-link{margin-top:auto;padding-top:14px;font-weight:600;text-decoration:none;color:var(--gold)!important}.paket-link::after{content:" \203A"}.paket-link:hover{text-decoration:underline;text-underline-offset:4px}
+.preis{display:flex;flex-direction:column}
+/* Bereichs-Kacheln */
+.kacheln{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 10px;margin-top:34px}
+.kacheln a{display:flex;flex-direction:column;align-items:center;gap:10px;width:132px;padding:14px 6px;color:#E8ECF3;text-decoration:none;font-size:15px;line-height:1.25;text-align:center;transition:color .25s}
+.kacheln .k-sym{display:flex;align-items:center;justify-content:center;width:64px;height:64px;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.kacheln .k-sym img,.kacheln .k-sym > svg{width:60px;height:60px;border-radius:14px}
+.kacheln .k-sym > svg[viewBox="0 0 24 24"]{width:46px;height:46px;border-radius:0;color:var(--gold)}
+.kacheln .k-sym > svg[viewBox="0 0 120 140"]{width:52px;height:auto;border-radius:0}
+.kacheln a:hover{color:var(--gold)}.kacheln a:hover .k-sym{transform:translateY(-4px)}
+/* Mitlaufende Leiste */
+.lokal{position:sticky;top:0;z-index:30;background:rgba(20,33,61,.82);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(255,255,255,.14);padding-top:env(safe-area-inset-top,0px)}
+.lokal .wrap{display:flex;align-items:center;gap:12px 28px;min-height:52px}
+.lokal .l-marke{font-size:21px;--wm-schrift:#F7F3EA;white-space:nowrap}.lokal .l-marke .wm-apps{font-size:.5em}
+.lokal .l-links{margin-left:auto;display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}.lokal .l-links::-webkit-scrollbar{display:none}
+.lokal .l-links a{color:#D6DCE8;text-decoration:none;font-size:14px;white-space:nowrap}.lokal .l-links a:hover{color:#fff}
+.lokal .l-knopf{color:var(--gold);font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}.lokal .l-knopf::after{content:" \203A"}
+html{scroll-padding-top:64px}
+@media (max-width:760px){.lokal .l-marke{display:none}.lokal .l-links{margin-left:0}.kacheln a{width:30%;min-width:96px;font-size:14px}.kacheln .k-sym img,.kacheln .k-sym > svg{width:52px;height:52px}}
+/* ===== Schlicht wie bei Apple: durchgehend Dunkelblau, keine Rundungen, weiße Wellenlinien als Trennung (24.11.2026) ===== */
+:root{--text:#E8ECF3;--grau:#B9C2D0;--linie:rgba(255,255,255,.18);--weiss:rgba(255,255,255,.035);--perl:#14213D;--golddunkel:#D4B483;color-scheme:dark}
+body{background:var(--blau)!important;color:var(--text)}
+.kopf{overflow:visible}.kopf .ketten{overflow:hidden}
+main *,.recht *,footer *,.geschenk-platz *{border-radius:0!important}
+main .ic,main .ikonen img,main .ic-svg{border-radius:22%!important}
+main section,.recht{position:relative;background:none!important;padding-block:112px!important}
+main section + section::before,.recht::before{content:"";position:absolute;left:0;right:0;top:-28px;height:56px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 56' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C240,62 480,0 720,24 C960,48 1200,8 1440,28' fill='none' stroke='white' stroke-opacity='.5' stroke-width='1.2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+h2{font-size:clamp(2.2rem,5vw,3.4rem)!important;letter-spacing:-.03em!important}
+h2,.inhalt h3,.wert b,.recht h3,.schritte b,.preis h3,.preis .betrag,.betreuung h3,.bereich h3{color:#fff!important}
+.preis.edel .betrag{color:var(--gold)!important}
+.label,.inhalt .app-art{color:var(--gold)!important}
+a{color:var(--gold)}
+.karte,.bereich,.paket,main .kontakt,.schritte li,.betreuung,.preis{background:rgba(255,255,255,.035)!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:none!important}
+.karte:hover,.bereich:hover{border-color:var(--gold)!important;box-shadow:none!important}
+.preis.edel{border-color:var(--gold)!important;background:rgba(212,180,131,.07)!important}
+.ueb{box-shadow:none!important;border:1px solid rgba(255,255,255,.14)}
+.sparte{--wm-schrift:#F7F3EA!important}
+.bereich .deko svg g{fill:#D4B483!important}
+.bereich .weiter,.mail,.store,.mehr{color:var(--gold)!important}
+.haken,.preis.edel .haken{color:var(--text)!important}
+.schritte li::before{background:none!important;border:1px solid var(--gold);color:var(--gold)!important}
+.recht{border-top:0!important}.recht p{color:var(--grau)!important}
+.ueber{background:none!important}
+footer{border-top:1px solid rgba(255,255,255,.14)}
+.ab18{background:none!important;border:1px solid var(--gold);color:var(--gold)!important}
+.inhalt .ic-svg{background:#fff!important}
+.betreuung .ab{color:var(--gold)!important}
+.browser{box-shadow:none!important}
+
+.preis-bereich .preis:not(.edel),.preis-bereich .betreuung{color:var(--text)}
+.preis-bereich .preis:not(.edel) .label,.preis-bereich .betreuung .label{color:var(--golddunkel)}
+.buehne .logo-klein{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 0 26px;font-size:clamp(34px,5vw,50px)}
+.buehne .logo-klein > svg{width:1.25em;height:auto;filter:drop-shadow(0 12px 26px rgba(0,0,0,.35))}
+.buehne .logo-klein .wm-apps{font-size:.5em;letter-spacing:.32em}
+@media (prefers-reduced-motion:reduce){.buehne > *,.runter i{animation:none}}
 .buehne.klein{padding-block:20px 100px}
-.buehne.klein .label{color:var(--gold);margin-bottom:12px}
+.buehne.klein > svg{width:64px;height:auto;margin:0 0 22px;filter:drop-shadow(0 12px 26px rgba(0,0,0,.35))}
+.buehne.klein h1 em{font-style:normal;background:var(--goldglanz);-webkit-background-clip:text;background-clip:text;color:transparent}
 .buehne.klein h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.04;letter-spacing:-.025em;margin:0 0 14px;color:#fff;text-wrap:balance}
 .sprung{display:flex;gap:8px 10px;flex-wrap:wrap;justify-content:center}
 .sprung a{color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 18px;text-decoration:none;font-size:15px}
@@ -199,62 +320,73 @@ footer .absender svg{width:20px;height:auto}
 .preis-satz{margin:0 0 8px;color:var(--grau)}
 .preis.edel{background:radial-gradient(600px 360px at 85% 0%,#25386A 0%,rgba(37,56,106,0) 70%),var(--blau);border-color:var(--blau)}
 .preis.edel .label{color:var(--gold)}.preis.edel h3{color:#fff}.preis.edel .betrag{color:var(--gold)}.preis.edel .betrag span{color:#C8D0DE}.preis.edel .preis-satz{color:#C8D0DE}.preis.edel .haken{color:#E8ECF3}
+.eigene-app{margin-bottom:88px}.eigene-app .label{margin:0 0 8px}.eigene-app p:not(.label){max-width:40em}
+.ueber p em{font-style:normal;color:var(--gold)}
+.preise.drei{grid-template-columns:repeat(3,minmax(0,1fr))}
+.preis .betrag span:first-child{margin-right:.2em}
+.betreuung{margin-top:24px;border-radius:24px;padding:clamp(24px,3.5vw,36px);background:var(--weiss);border:1px solid var(--gold)}
+.betreuung .label{margin:0 0 6px}.betreuung h3{margin:0 0 8px;font-family:var(--serif);font-weight:700;font-size:1.5rem;color:var(--blau)}
+.betreuung.individuell{display:flex;justify-content:space-between;align-items:center;gap:20px 40px;flex-wrap:wrap;border-color:var(--linie)}
+.betreuung .ab{color:var(--golddunkel);font-size:.8em;margin-left:.3em;white-space:nowrap}.betreuung p:not(.label){margin:0;color:var(--grau);max-width:52em}
+@media (max-width:960px){.preise.drei{grid-template-columns:1fr}}
 .preis-fuss{margin:22px 0 0;text-align:center;color:var(--grau);font-size:15px}
 @media (max-width:760px){.preise{grid-template-columns:1fr}}
 </style>
-<link rel="apple-touch-icon" sizes="180x180" href="https://perlage-apps.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://perlage-apps.github.io/logo/favicon.svg" color="#14213D">
-<meta name="apple-mobile-web-app-title" content="Perlage Apps">
-<meta property="og:site_name" content="Perlage Apps">
-<meta property="og:title" content="Perlage Apps – Apps und Internetseiten, mit Sorgfalt gemacht">
-<meta property="og:image" content="https://perlage-apps.github.io/apple-touch-icon.png">
-<meta property="og:url" content="https://perlage-apps.github.io/">
+<link rel="apple-touch-icon" sizes="180x180" href="https://perlage-innovation.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://perlage-innovation.de/logo/favicon.svg" color="#14213D">
+<meta name="apple-mobile-web-app-title" content="Perlage">
+<meta property="og:site_name" content="Perlage">
+<meta property="og:title" content="Perlage – The pearl of innovation.">
+<meta property="og:image" content="https://perlage-innovation.de/apple-touch-icon.png">
+<meta property="og:url" content="https://perlage-innovation.de/">
 </head>
 <body>
 <header class="kopf">
 <div class="ketten" aria-hidden="true"><div class="kette" style="left:9%"><i style="--g:7px;--t:9.5s;--v:-0.0s"></i><i style="--g:9px;--t:9.5s;--v:-1.58s"></i><i style="--g:6px;--t:9.5s;--v:-3.17s"></i><i style="--g:10px;--t:9.5s;--v:-4.75s"></i><i style="--g:8px;--t:9.5s;--v:-6.33s"></i><i style="--g:7px;--t:9.5s;--v:-7.92s"></i></div><div class="kette" style="left:23%"><i style="--g:5px;--t:7.4s;--v:-0.0s"></i><i style="--g:7px;--t:7.4s;--v:-1.23s"></i><i style="--g:5px;--t:7.4s;--v:-2.47s"></i><i style="--g:6px;--t:7.4s;--v:-3.7s"></i><i style="--g:8px;--t:7.4s;--v:-4.93s"></i><i style="--g:5px;--t:7.4s;--v:-6.17s"></i></div><div class="kette" style="left:77%"><i style="--g:9px;--t:8.6s;--v:-0.0s"></i><i style="--g:12px;--t:8.6s;--v:-1.43s"></i><i style="--g:8px;--t:8.6s;--v:-2.87s"></i><i style="--g:11px;--t:8.6s;--v:-4.3s"></i><i style="--g:10px;--t:8.6s;--v:-5.73s"></i><i style="--g:9px;--t:8.6s;--v:-7.17s"></i></div><div class="kette" style="left:91%"><i style="--g:6px;--t:6.8s;--v:-0.0s"></i><i style="--g:5px;--t:6.8s;--v:-1.13s"></i><i style="--g:7px;--t:6.8s;--v:-2.27s"></i><i style="--g:6px;--t:6.8s;--v:-3.4s"></i><i style="--g:5px;--t:6.8s;--v:-4.53s"></i><i style="--g:7px;--t:6.8s;--v:-5.67s"></i></div></div>
 <div class="wrap">
-<nav aria-label="Hauptnavigation"><a class="marke" href="./" aria-label="Perlage Apps – Startseite"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span><span class="wm-apps">APPS</span></span></span></a>
+<nav aria-label="Hauptnavigation"><a class="marke" href="./" aria-label="Perlage – Startseite"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span></span></span></a>
 <ul><li><a href="apps/">Apps</a></li><li><a href="internetseiten/">Internetseiten</a></li><li><a href="./#ueber">Über uns</a></li><li><a href="./#kontakt">Kontakt</a></li></ul></nav>
 <div class="buehne">
-<h1 class="logo-gross" aria-label="Perlage Apps – Your pearl of innovation."><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span><span class="wm-apps">AP<svg class="pp" viewBox="0 -32 76 102" aria-hidden="true"><g fill="currentColor"><rect x="-0.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="39.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="39.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="39.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="49.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="59.5" width="9.2" height="9.2" rx="1.6"/><rect x="54" y="-12" width="6" height="6" rx="1" fill-opacity=".55"/><rect x="64" y="-28" width="5" height="5" rx="1" fill-opacity=".35"/></g></svg>S</span></span><span class="slogan">Your pearl of innovation.</span></span></h1>
+<h1 class="logo-gross" aria-label="Perlage – The pearl of innovation."><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span></span><span class="slogan">The pearl of <span class="slogan-gold">innovation</span>.</span></span></h1>
 <p class="leitsatz">Apps und Internetseiten, <em>mit Sorgfalt</em> gemacht.</p>
-<p>Wir entwickeln Apps für iPhone, iPad und Mac – und bauen schlichte, schnelle Internetseiten für kleine Betriebe und Vereine. Ohne Werbung, ohne Datensammeln.</p>
-<div class="knoepfe"><a class="k1" href="apps/">Unsere Apps</a><a class="k2" href="internetseiten/">Internetseiten</a></div>
+<p>Wir entwickeln eigene Apps für iPhone, iPad und Mac – und gestalten Internetseiten und Apps für Unternehmen, Vereine und Selbstständige. Klar, elegant und bis ins Detail durchdacht.</p>
 </div>
 </div>
-<svg class="welle" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C240,62 480,0 720,24 C960,48 1200,8 1440,28 L1440,56 L0,56 Z" fill="#F7F3EA"/></svg>
+<svg class="welle" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C240,62 480,0 720,24 C960,48 1200,8 1440,28" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>
 </header>
 <main>
 <section id="bereiche"><div class="wrap">
-<div class="titel"><div><p class="label">Was wir machen</p><h2>Zwei Bereiche, ein Anspruch</h2></div><p>Alles, was wir bauen, soll einfach zu benutzen sein, gut aussehen und deine Daten in Ruhe lassen.</p></div>
+<div class="titel"><div><p class="label">Was wir machen</p><h2>Zwei Bereiche, ein Anspruch</h2></div><p>Alles, was wir bauen, soll sich leicht anfühlen, gut aussehen und deine Daten in Ruhe lassen.</p></div>
 <div class="bereiche">
 <article class="bereich">
-<p class="label">Apps</p>
+<span class="deko" aria-hidden="true"><svg viewBox="0 0 120 140" aria-hidden="true"><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg></span>
+<p class="sparte"><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span><span class="wm-apps">AP<svg class="pp" viewBox="0 -32 76 102" aria-hidden="true"><g fill="currentColor"><rect x="-0.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="39.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="39.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="39.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="49.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="59.5" width="9.2" height="9.2" rx="1.6"/><rect x="54" y="-12" width="6" height="6" rx="1" fill-opacity=".55"/><rect x="64" y="-28" width="5" height="5" rx="1" fill-opacity=".35"/></g></svg>S</span></span></span></p>
 <h3>Apps für iPhone, iPad und Mac</h3>
-<p>Für Vermieter, für Kinder, für Gastgeber und für jeden Tag – von Übergably über Pinos Welt bis Perlage Bar.</p>
+<p>Unsere eigenen Apps für Vermieter, Kinder, Gastgeber und den Alltag – und auf Wunsch eine App, die wir ganz für dich entwickeln.</p>
 <div class="ikonen"><img src="bilder/pino-malt.jpg" alt="Pino malt" width="52" height="52" loading="lazy"><img src="bilder/pino-spielt.jpg" alt="Pino spielt" width="52" height="52" loading="lazy"><img src="bilder/pino-doodle.jpg" alt="Pino Doodle" width="52" height="52" loading="lazy"><img src="bilder/ehrenmann.jpg" alt="Ehrenmann" width="52" height="52" loading="lazy"><img src="bilder/pino-rechnet.jpg" alt="Pino rechnet" width="52" height="52" loading="lazy"><img src="bilder/pino-vorschule.jpg" alt="Pino Vorschule" width="52" height="52" loading="lazy"><img src="bilder/scan.jpg" alt="Paperlo" width="52" height="52" loading="lazy"></div>
-<a class="weiter" href="apps/">Alle Apps ansehen →</a>
+<a class="weiter" href="apps/">Zu den Apps ›</a>
 </article>
 <article class="bereich dunkel">
-<p class="label">Internetseiten</p>
-<h3>Internetseiten für Betriebe und Vereine</h3>
-<p>Eine eigene Seite mit eigener Adresse – schlicht, schnell und auf dem Handy genauso gut wie am Computer.</p>
+<span class="deko" aria-hidden="true"><svg viewBox="0 0 120 140" aria-hidden="true"><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg></span>
+<p class="sparte"><span class="wm"><span class="wm-zeile"><span class="wm-perlage">Perlage</span><span class="wm-apps wm-web">W<svg class="pp" viewBox="0 -32 76 102" aria-hidden="true"><g fill="currentColor"><rect x="-0.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="29.5" y="-0.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="9.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="19.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="29.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="39.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="49.5" width="9.2" height="9.2" rx="1.6"/><rect x="-0.5" y="59.5" width="9.2" height="9.2" rx="1.6"/><rect x="9.5" y="59.5" width="9.2" height="9.2" rx="1.6"/><rect x="19.5" y="59.5" width="9.2" height="9.2" rx="1.6"/><rect x="30.5" y="60.5" width="7.4" height="7.4" rx="1.3" fill-opacity=".7"/><rect x="44" y="-12" width="6" height="6" rx="1" fill-opacity=".55"/><rect x="54" y="-28" width="5" height="5" rx="1" fill-opacity=".35"/></g></svg>B</span></span></span></p>
+<h3>Internetseiten mit Charakter</h3>
+<p>Ein Auftritt, maßgeschneidert für deinen Betrieb oder Verein – hochwertig gestaltet, schnell und auf jedem Gerät eine gute Figur.</p>
 <div class="browser" aria-hidden="true"><div class="leiste"><i></i><i></i><i></i><span>dein-betrieb.de</span></div><div class="flaeche"><b></b><s></s><s></s><s class="kurz"></s></div></div>
-<a class="weiter" href="internetseiten/">Mehr über Internetseiten →</a>
+<a class="weiter" href="internetseiten/">Zu den Internetseiten ›</a>
 </article>
 </div>
 </div></section>
 <section class="ueber" id="ueber"><div class="wrap z">
 <div class="zeichen-gross"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg></div>
 <div><p class="label">Über uns</p><h2>Warum „Perlage“?</h2>
-<p>Perlage nennt man das feine Perlen im Sektglas – viele kleine Perlen, die gemeinsam aufsteigen. So verstehen wir unsere Arbeit: klein, klar und mit Liebe zum Detail gemacht.</p>
-<p>Hinter Perlage Apps steht Alexander Matthias Müller aus Wunstorf bei Hannover. Jede App und jede Internetseite wird mit viel Liebe zum Detail entworfen und gepflegt – und auf Wünsche hören wir gern.</p></div>
+<p>Perlage nennt man das feine, beständige Perlen im Champagnerglas. Unzählige kleine Perlen steigen auf – leise, klar, und gemeinsam ergeben sie etwas Besonderes.</p>
+<p>Genau so arbeiten wir: Aus vielen kleinen, sorgfältig gesetzten Details entsteht etwas, das man gern benutzt. Deshalb steigen in unserem Zeichen Perlen aus Pixeln auf – das Digitale, mit der Ruhe und Eleganz eines guten Glases. The pearl of <em>innovation</em>.</p>
+<p>Hinter Perlage steht Alexander Matthias Müller aus Wunstorf bei Hannover. Jede App und jede Internetseite wird persönlich entworfen, gebaut und gepflegt.</p></div>
 </div></section>
 
 <section id="kontakt"><div class="wrap">
 <div class="kontakt"><div><h2>Fragen oder Wünsche?</h2><p>Schreib uns – wir antworten persönlich.</p></div>
-<a class="mail" href="mailto:info@perlage-apps.de">info@perlage-apps.de</a></div>
+<a class="mail" href="mailto:info@perlage-innovation.de">info@perlage-innovation.de</a></div>
 </div></section>
 
 </main>
@@ -262,19 +394,32 @@ footer .absender svg{width:20px;height:auto}
 <div id="impressum"><h3>Impressum</h3>
 <p>Angaben gemäß § 5 DDG</p>
 <p>Alexander Matthias Müller<br>Perlage Apps<br>Barnefeldstraße 12E<br>31515 Wunstorf<br>Deutschland</p>
-<p>E-Mail: <a href="mailto:info@perlage-apps.de">info@perlage-apps.de</a></p>
+<p>E-Mail: <a href="mailto:info@perlage-innovation.de">info@perlage-innovation.de</a></p>
 <p>Verantwortlich für den Inhalt: Alexander Matthias Müller, Anschrift wie oben.</p></div>
 <div id="datenschutz"><h3>Datenschutz auf dieser Website</h3>
 <p>Diese Website wird bei GitHub Pages (GitHub Inc., USA) bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Daten wie deine IP-Adresse, um die Seite auszuliefern und die Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). Wir setzen keine Cookies, laden keine Schriften oder Inhalte von Drittanbietern und werten die Aufrufe nicht aus.</p></div>
 <div><h3>Deine Rechte</h3>
-<p>Verantwortlich: Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info@perlage-apps.de">info@perlage-apps.de</a>.</p>
+<p>Verantwortlich: Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info@perlage-innovation.de">info@perlage-innovation.de</a>.</p>
 <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch (Art. 15–21 DSGVO) und kannst dich bei einer Aufsichtsbehörde beschweren, z. B. bei Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover.</p>
 <p>Die Datenschutzhinweise zu den einzelnen Apps stehen auf der jeweiligen App-Seite.</p></div>
 </div></section>
 <footer><div class="wrap">
-<span class="absender"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg> © 2026 Perlage Apps · Alexander Matthias Müller</span>
-<span><a href="./#impressum">Impressum</a> · <a href="./#datenschutz">Datenschutz</a> · <a href="mailto:info@perlage-apps.de">Kontakt</a></span>
+<span class="absender"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg> © 2026 Perlage · Alexander Matthias Müller</span>
+<span><a href="./#impressum">Impressum</a> · <a href="./#datenschutz">Datenschutz</a> · <a href="mailto:info@perlage-innovation.de">Kontakt</a></span>
 </div></footer>
+<script>(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var sel='main .titel, .bereich, .ueber .z > *, main .kontakt, .wert, .karte, .ueb, .preis, .schritte li, .paket, .betreuung, .geschenk-band, .zeile, .karten > div, .preise > div, .support > div, .band h2, .anfrage-form';
+var els=[].slice.call(document.querySelectorAll(sel));
+els.forEach(function(e){var p=e.parentElement;e._i=Math.min(p?[].indexOf.call(p.children,e):0,4);e.classList.add('schwebt');
+e.addEventListener('transitionend',function(ev){if(ev.propertyName==='opacity')e.style.transitionDelay=''})});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){var e=x.target;
+if(x.isIntersecting){e.style.transitionDelay=e._i*60+'ms';e.classList.add('da')}
+else{e.style.transitionDelay='';e.classList.remove('da')}})},{rootMargin:'8% 0px 0px 0px',threshold:0});
+els.forEach(function(e){io.observe(e)});
+var bu=document.querySelector('.buehne'),zg=document.querySelector('.zeichen-gross svg'),t=false;
+function gleiten(){t=false;var y=window.scrollY||0;if(bu&&y<900){bu.style.transform='translateY('+(y*.22).toFixed(1)+'px)';bu.style.opacity=Math.max(0,1-y/520).toFixed(3)}
+if(zg){var r=zg.getBoundingClientRect(),m=(r.top+r.height/2-innerHeight/2)/innerHeight;zg.style.transform='translateY('+(m*-46).toFixed(1)+'px)'}}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(gleiten)}},{passive:true});gleiten()})();</script>
 
 <script>(function(){var h=location.hash.slice(1);if(["apps","vermieter","kinder","bar","alltag","spiele"].indexOf(h)>-1){location.replace("apps/"+(h=="apps"?"":"#"+h))}})();</script>
 </body></html>

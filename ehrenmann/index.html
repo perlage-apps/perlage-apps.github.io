@@ -3,85 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ehrenmann – eine App von Perlage Apps</title>
+<title>Ehrenmann – eine App von Perlage</title>
 <meta name="description" content="Ehre sammeln, Prost teilen: Punkte für alles, was du für deine Liebsten tust – und Freunde sehen, wo du anstößt.">
 <link rel="icon" href="icon.jpg">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:#2A1E12;background:#FFFFFF;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:#8A5A12}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
-.oben{background:linear-gradient(180deg,#3B2914,#1C140C);color:#FFFFFF}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-size:15px}
-nav a{color:#FFFFFF;text-decoration:none;opacity:.85;margin-left:18px}
-nav a:first-child{margin-left:0}
-.held{display:flex;gap:28px;align-items:center;padding:30px 0 56px;flex-wrap:wrap}
-.held img{width:128px;height:128px;border-radius:29px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
-.held .symbol{display:flex;width:128px;height:128px;border-radius:29px;background:#fff;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.12)}.held .symbol svg{width:100%;height:100%}
-.held h1{font-size:clamp(34px,5vw,50px);margin:0 0 8px;font-weight:900;letter-spacing:-.3px}
-.held p{font-size:19px;margin:0 0 18px;color:#CFE3F2;max-width:620px}
-.knopf{display:inline-block;background:#F2B33D;color:#2A1E12;font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none;font-size:16px}
-.hinweis{display:inline-block;background:rgba(255,255,255,.75);color:#2A1E12;font-weight:700;padding:11px 20px;border-radius:999px;font-size:15px}
-.geschenk{position:relative;overflow:hidden;display:flex;gap:18px;align-items:center;margin:-28px 0 0;padding:18px 24px;border-radius:20px;color:#F7EDE6;background:radial-gradient(130% 200% at 0% 0%,#8E1B30 0%,#6A1224 45%,#430A17 100%);border:1px solid rgba(212,180,131,.55);box-shadow:0 0 0 5px rgba(212,180,131,.10),0 16px 36px -18px rgba(67,10,23,.6)}
-.geschenk::after{content:"";position:absolute;inset:6px;border-radius:15px;border:1px solid rgba(212,180,131,.28);pointer-events:none}
-.geschenk .schleife{flex:none;width:40px;height:40px}
-.geschenk p{margin:0;font-size:16px;line-height:1.5}.geschenk strong{color:#F3E3C3;font-weight:700}
-.bilder{display:flex;gap:18px;overflow-x:auto;padding:36px 0 8px;scroll-snap-type:x mandatory}
-.bilder figure{margin:0;flex:none;scroll-snap-align:start;text-align:center}
-.bilder img{height:420px;width:auto;border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,.12);display:block}
-.bilder.quer img{height:300px}
-.bilder figcaption{font-size:14px;color:#6B5A45;margin-top:8px}
-section{padding:52px 0}
-h2{font-size:28px;margin:0 0 18px;font-weight:900}
-.karte{background:#FFF8EB;border:1.5px solid #F1DDB5;border-radius:22px;padding:24px 26px}
-.zwei{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-ul.liste{margin:0;padding-left:20px} ul.liste li{margin:7px 0}
-.klein{color:#6B5A45;font-size:15px}
-details{background:#FFF8EB;border:1.5px solid #F1DDB5;border-radius:16px;padding:14px 18px;margin:10px 0}
-summary{font-weight:800;cursor:pointer}
-details p{margin:10px 0 2px}
-ol.ds li{margin:8px 0}
-footer{background:#F4F6F9;color:#5B6577;padding:34px 0;font-size:14px;margin-top:20px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
-footer a{color:#14213D}
-@media (max-width:600px){.bilder img{height:340px}.bilder.quer img{height:200px}}
+:root{--held1:#3B2914;--held2:#1C140C;--ht:#FFFFFF;--hn:rgba(255,255,255,.78);--ak:#F2B33D;--ak-text:#8A5A12;--grund:#F5F6F8;--weiss:#FFFFFF;--text:#1D2733;--neben:#525D6E;--linie:#DDE2E8;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--grund);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ak-text)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(22px,env(safe-area-inset-left,0px));padding-right:max(22px,env(safe-area-inset-right,0px))}
+/* Leiste */
+.leiste{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--held1) 88%,transparent);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(127,127,127,.18);color:var(--ht);padding-top:env(safe-area-inset-top,0px)}
+.leiste .wrap{display:flex;align-items:center;gap:14px 26px;min-height:52px}
+.leiste a{color:var(--ht);text-decoration:none}
+.zurueck{font-size:15px;opacity:.85;white-space:nowrap}.zurueck:hover{opacity:1}
+.leiste .name{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;white-space:nowrap}
+.leiste .name img,.leiste .name svg{width:26px;height:26px;border-radius:6px}
+.leiste nav{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:14px}
+.leiste nav a{opacity:.8}.leiste nav a:hover{opacity:1}
+.leiste .laden{color:var(--ak);opacity:1;font-weight:600}
+.lang{display:flex;gap:4px}.lang button{background:none;border:1px solid rgba(127,127,127,.4);color:var(--ht);font:inherit;font-size:13px;padding:3px 9px;cursor:pointer}.lang button[aria-pressed="true"]{background:var(--ak);border-color:var(--ak);color:#14181D}
+/* Kopf */
+.held{background:linear-gradient(180deg,var(--held1),var(--held2));color:var(--ht);overflow:hidden}
+.held .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:end;padding-top:72px}
+.held .text{padding-bottom:80px;min-width:0}
+.held .symbol{width:84px;height:84px;border-radius:19px;margin-bottom:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.held .symbol.svg{background:#fff;padding:16px;display:flex}.held .symbol svg{width:100%;height:100%}
+.augenbraue{margin:0 0 14px;color:var(--ak);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.held:not(.dunkel) .augenbraue{color:var(--ak-text)}
+.held h1{margin:0 0 18px;font-size:clamp(44px,7vw,72px);line-height:1.02;font-weight:700;letter-spacing:-.03em}
+.held .lead{margin:0 0 30px;font-size:clamp(18px,2.2vw,21px);color:var(--hn);max-width:34em}
+.aktion{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center}
+.aktion a{font-size:19px;font-weight:600;text-decoration:none;color:var(--ak)}.held:not(.dunkel) .aktion a{color:var(--ak-text)}
+.aktion a.zweit{color:var(--ht)!important;font-weight:500}
+.aktion a::after{content:" \203A"}.aktion a:hover{text-decoration:underline;text-underline-offset:4px}
+.aktion .bald{font-size:15px;font-weight:600;border:1px solid currentColor;padding:6px 12px;color:var(--ak)}
+.held:not(.dunkel) .aktion .bald{color:var(--ak-text)}
+.held .klein{margin:22px 0 0;font-size:14px;color:var(--hn)}
+.geraete{display:flex;justify-content:center;align-items:flex-end;gap:0;min-width:0}
+.geraet{border:7px solid #0E1012;background:#0E1012;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.geraet.hoch{border-radius:38px;width:min(270px,48%)}
+.geraet.hoch.tablet{border-radius:22px;width:min(330px,60%)}
+.geraet.quer{border-radius:30px;width:100%}
+.geraet.quer.tablet{border-radius:20px}
+.geraete .geraet{margin-bottom:-56px}
+.geraete .geraet.hoch + .geraet.hoch{margin-left:-34px;margin-bottom:-90px;width:min(230px,42%);position:relative;z-index:-0}
+.geraete .geraet.hoch:first-child{position:relative;z-index:1}
+.geraete .geraet.quer{margin-bottom:-40px}
+/* Geschenk */
+.geschenk{display:flex;gap:16px;align-items:center;padding:20px 24px;margin:48px 0 0;color:#F7EDE6;background:#5E1020;border:1px solid rgba(212,180,131,.55)}
+.geschenk .schleife{flex:none;width:36px;height:36px}.geschenk p{margin:0;font-size:16px}.geschenk strong{color:#F3E3C3}
+/* Abschnitte */
+section{padding:104px 0}
+h2{margin:0 0 14px;font-size:clamp(32px,4.6vw,44px);line-height:1.1;font-weight:700;letter-spacing:-.025em}
+.einleitung{margin:0 0 44px;font-size:clamp(18px,2vw,20px);color:var(--neben);max-width:40em}
+.zeile{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.zeile + .zeile{margin-top:104px}
+.zeile.rechts .bild{order:2}
+.zeile .bild{display:flex;justify-content:center;min-width:0}
+.zeile .bild .geraet.hoch{width:min(290px,72%)}
+.zeile .bild .geraet.hoch.tablet{width:min(380px,90%)}
+.zeile .augenbraue{color:var(--ak-text)}
+.zeile h3{margin:0 0 14px;font-size:clamp(28px,3.4vw,36px);line-height:1.15;font-weight:700;letter-spacing:-.02em}
+.zeile p{margin:0;font-size:18px;color:var(--neben)}
+.karten{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--linie);border:1px solid var(--linie);margin-top:88px}
+.karten > div{background:var(--weiss);padding:30px 28px}
+.karten .nr{margin:0 0 10px;font-size:30px;font-weight:700;color:var(--ak-text)}
+.karten p{margin:0;color:var(--neben)}
+.band{background:linear-gradient(180deg,var(--held1),var(--held2));color:var(--ht)}
+.band .wrap{max-width:860px;text-align:center}
+.band .augenbraue{color:var(--ak)}.band:not(.dunkel) .augenbraue{color:var(--ak-text)}
+.band h2{font-size:clamp(30px,4.2vw,40px)}.band p{margin:0 auto;font-size:19px;color:var(--hn);max-width:36em}
+.band .fein{margin-top:22px;font-size:15px}
+.mitte{text-align:center}.mitte .einleitung{margin-left:auto;margin-right:auto}
+.preise{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--linie);border:1px solid var(--linie);text-align:left}
+.preise > div{background:var(--weiss);padding:30px 28px;display:flex;flex-direction:column;gap:10px}
+.preise h3{margin:0;font-size:20px}.preise p{margin:0;color:var(--neben);font-size:16px}
+.preise .hervor{outline:2px solid var(--ak-text);outline-offset:-2px}
+.hinweis{margin:22px auto 0;font-size:14px;color:var(--neben);max-width:46em}
+details{border-top:1px solid var(--linie);padding:20px 0}details:last-of-type{border-bottom:1px solid var(--linie)}
+summary{font-weight:600;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";font-weight:300;font-size:24px;line-height:1;color:var(--ak-text);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:12px 0 0;color:var(--neben)}
+.fragen{max-width:820px}
+.support{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1px;background:var(--linie);border:1px solid var(--linie)}
+.support > div{background:var(--weiss);padding:40px 36px}
+.support > div:last-child{background:linear-gradient(180deg,var(--held1),var(--held2));color:var(--ht)}
+.support h3{margin:0 0 10px;font-size:26px}.support p{margin:0 0 14px;color:var(--neben)}.support > div:last-child p{color:var(--hn)}
+.support .mail{font-size:19px;font-weight:600;text-decoration:none;word-break:break-word}.support .mail::after{content:" \203A"}
+.support > div:last-child .aktion a{font-size:18px}
+.ds{max-width:860px}
+.ds h2{font-size:32px}
+.ds ol,.ds ul{padding-left:22px}.ds li{margin:8px 0;color:var(--text)}
+.ds .fein,.ds p{color:var(--neben);font-size:15px}
+.roh h3{margin:28px 0 8px;font-size:18px}.roh h3:first-child{margin-top:0}.roh p,.roh li{color:var(--neben)}
+.roh .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--linie);border:1px solid var(--linie);margin-bottom:28px}
+.roh .grid .card{background:var(--weiss);padding:28px;color:var(--neben)}.roh .grid .card h3{margin:0 0 8px;color:var(--text);font-size:20px}
+.roh > .card,.roh .card:not(.grid .card){background:var(--weiss);border:1px solid var(--linie);padding:32px;margin-bottom:24px}
+.roh .muted{color:var(--neben);font-size:15px}
+footer{background:#14213D;color:#AEB8C9;font-size:14px;padding-block:34px calc(34px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:center}
+footer a{color:#E8ECF3;text-decoration:none}footer a:hover{text-decoration:underline}
+footer .absender{display:flex;align-items:center;gap:10px}footer .absender svg{width:18px;height:auto}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+[data-l]{display:none}html[lang="de"] [data-l="de"],html[lang="en"] [data-l="en"]{display:revert}
+html:not([lang="en"]) [data-l="de"]{display:revert}
+.schwebt{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.16,1,.3,1)!important}.schwebt.da{opacity:1;transform:none}
+@keyframes auftauchen{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.held .text > *,.held .geraete{animation:auftauchen .9s cubic-bezier(.16,1,.3,1) both}.held .text > :nth-child(2){animation-delay:.08s}.held .text > :nth-child(3){animation-delay:.16s}.held .text > :nth-child(4){animation-delay:.24s}.held .geraete{animation-delay:.2s}
+@media (max-width:900px){.leiste nav a:not(.laden){display:none}.held .wrap{grid-template-columns:1fr;padding-top:48px;gap:8px}.held .text{padding-bottom:24px}.geraete{padding-bottom:0}
+.zeile{grid-template-columns:1fr;gap:32px}.zeile.rechts .bild{order:0}.zeile + .zeile{margin-top:80px}section{padding:80px 0}.support{grid-template-columns:1fr}.support > div{padding:32px 24px}}
+@media (max-width:520px){.leiste .name span{display:none}.geraete .geraet.hoch{width:58%}.geraete .geraet.hoch + .geraet.hoch{width:48%}.geschenk{align-items:flex-start}}
+@media (prefers-reduced-motion:reduce){.held .text > *,.held .geraete{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="oben"><div class="wrap">
-<nav><span><a href="../">← Perlage Apps</a></span><span><a href="#funktionen">Funktionen</a><a href="#preise">Preise</a><a href="#datenschutz">Datenschutz</a><a href="#support">Hilfe</a></span></nav>
-<div class="held"><img src="icon.jpg" alt="App-Symbol Ehrenmann">
-<div><h1>Ehrenmann</h1><p>Ehre sammeln, Prost teilen: Punkte für alles, was du für deine Liebsten tust – und Freunde sehen, wo du anstößt.</p><a class="knopf" href="https://apps.apple.com/de/app/ehrenmann-ehrenfrau/id6828551543">Im App Store laden</a> <span class="hinweis">Ab 18 Jahren</span></div></div>
+<div class="leiste"><div class="wrap">
+<a class="zurueck" href="../apps/">‹ Alle Apps</a>
+<a class="name" href="#start"><img src="icon.jpg" alt=""><span>Ehrenmann</span></a>
+<nav><a href="#funktionen">Funktionen</a><a href="#preise">Preise</a><a href="#fragen">Fragen</a><a href="#support">Support</a><a href="#datenschutz">Datenschutz</a><a class="laden" href="https://apps.apple.com/de/app/ehrenmann-ehrenfrau/id6828551543">Laden</a></nav>
 </div></div>
 
-
-<div class="wrap"><div class="bilder"><figure><img src="bild1.jpg" alt="Das Punktekonto" loading="lazy"><figcaption>Das Punktekonto</figcaption></figure><figure><img src="bild2.jpg" alt="Willkommen bei Ehrenmann" loading="lazy"><figcaption>Willkommen bei Ehrenmann</figcaption></figure></div></div>
-
-<section id="funktionen"><div class="wrap zwei">
-<div class="karte"><h2>Was Ehrenmann kann</h2><ul class="liste"><li>Prost teilen: ein Tipp auf den Kreis – Freunde sehen, was du gerade trinkst und wo. Kaffee, Wasser, Limo, Bier oder Wein; du entscheidest, wer es sieht. Nach der Trinkdauer verschwindet der Eintrag</li><li>Punktekonto: eintragen, was du für deine Liebsten tust, im Rang aufsteigen und jeden Tag einen Spruch zum Teilen – als Spaß gedacht und jederzeit abschaltbar</li><li>Ehrentage: Valentinstag, Muttertag, Hochzeitstag und Geburtstage – Erinnerung 3 Tage vorher und am Tag selbst</li><li>Freunde per QR-Code oder Code hinzufügen – nur Spitzname und Farbe, kein Profilbild, keine Fotos</li><li>Kein Konto, kein Passwort, keine Werbung</li></ul></div>
-<div class="karte"><h2>Für wen</h2><p><strong>Erwachsene ab 18 Jahren</strong></p><p class="klein">iPhone</p>
-<p class="klein">Keine Werbung · kein Konto · kein Tracking</p></div>
+<header class="held dunkel" id="start"><div class="wrap">
+<div class="text">
+<p class="augenbraue">iPhone</p>
+<h1>Ehrenmann</h1>
+<p class="lead">Ehre sammeln, Prost teilen: Punkte für alles, was du für deine Liebsten tust – und Freunde sehen, wo du anstößt.</p>
+<div class="aktion"><a href="https://apps.apple.com/de/app/ehrenmann-ehrenfrau/id6828551543">Im App Store laden</a><a class="zweit" href="#funktionen">Was die App kann</a><span class="bald">Ab 18 Jahren</span></div>
+<p class="klein">Keine Werbung · kein Tracking</p>
+</div>
+<div class="geraete"><img class="geraet hoch " src="bild1.jpg" alt="Das Punktekonto" width="414" height="900" loading="lazy"><img class="geraet hoch " src="bild2.jpg" alt="Willkommen bei Ehrenmann" width="414" height="900" loading="lazy"></div>
+</div></header>
+<section id="funktionen"><div class="wrap">
+<h2>Was Ehrenmann kann.</h2>
+<div class="zeile"><div class="bild"><img class="geraet hoch " src="bild1.jpg" alt="Das Punktekonto" width="414" height="900" loading="lazy"></div><div><p class="augenbraue">Das Punktekonto</p><h3>Prost teilen</h3><p>ein Tipp auf den Kreis – Freunde sehen, was du gerade trinkst und wo. Kaffee, Wasser, Limo, Bier oder Wein; du entscheidest, wer es sieht. Nach der Trinkdauer verschwindet der Eintrag</p></div></div>
+<div class="zeile rechts"><div class="bild"><img class="geraet hoch " src="bild2.jpg" alt="Willkommen bei Ehrenmann" width="414" height="900" loading="lazy"></div><div><p class="augenbraue">Willkommen bei Ehrenmann</p><h3>Punktekonto</h3><p>eintragen, was du für deine Liebsten tust, im Rang aufsteigen und jeden Tag einen Spruch zum Teilen – als Spaß gedacht und jederzeit abschaltbar</p></div></div>
+<div class="karten"><div><p class="nr">3</p><p>Ehrentage: Valentinstag, Muttertag, Hochzeitstag und Geburtstage – Erinnerung 3 Tage vorher und am Tag selbst</p></div><div><p class="nr">4</p><p>Freunde per QR-Code oder Code hinzufügen – nur Spitzname und Farbe, kein Profilbild, keine Fotos</p></div><div><p class="nr">5</p><p>Kein Konto, kein Passwort, keine Werbung</p></div></div>
 </div></section>
-
-<section id="preise" style="padding-top:0"><div class="wrap"><div class="karte">
-<h2>Preise</h2><ul class="liste"><li>Kostenlos laden</li><li><strong>Ehrenclub:</strong> einmalig 1,99 €, kein Abo – im Umkreis und weltweit sichtbar sein, Leute in der Nähe entdecken, unbegrenzt eigene Kreationen, goldenes Club-Siegel und ein App-Symbol mit Goldrahmen</li><li>Bitte genieße Alkohol verantwortungsvoll. Ehrenmann ist für Erwachsene ab 18 Jahren.</li></ul>
-<p class="klein">Preise in Euro für Deutschland; in anderen Ländern zeigt der App Store den Landespreis. Abos verlängern sich automatisch und lassen sich jederzeit in den Einstellungen deiner Apple-ID kündigen.</p>
-</div></div></section>
-
-<section id="datenschutz" style="padding-top:0"><div class="wrap">
-<h2>Datenschutz</h2>
-<ol class="ds"><li>Ehrenmann erhebt so wenige Daten wie möglich. Es gibt keine Werbung, keine Analyse-Werkzeuge, kein Tracking und keine Weitergabe an Dritte.</li><li>Für die Funktionen mit Freunden nutzt die App die öffentliche Datenbank von Apple iCloud (CloudKit). Gespeichert werden dein Spitzname, deine gewählte Farbe und Anrede, dein Punktestand, dein Freundes-Code, ob du Ehrenclub-Mitglied bist, eine anonyme Kennung von Apple (nicht deine Apple-ID, nicht deine E-Mail), deine Freundschaften und Meldungen, wenn du andere Nutzer meldest.</li><li>Wenn du auf „Prost“ tippst, werden Getränk, ein kurzer Ortsname und dein Standort gespeichert – für Freunde genau, für alle anderen auf etwa 300 Meter gerundet. Der Eintrag läuft nach der Trinkdauer ab und wird gelöscht. Kurze Mitteilungen an Freunde werden nach einem Tag gelöscht.</li><li>Der Standort wird nur abgefragt, während du die App nutzt, und nur geteilt, wenn du aktiv auf „Prost“ tippst. Die Freigabe lässt sich jederzeit in den iPhone-Einstellungen ändern.</li><li>Punkte-Verlauf, Ehrentage, eigene Getränke-Kreationen und alle Einstellungen bleiben nur auf deinem iPhone.</li><li>Mitteilungen (z. B. Freundschaftsanfragen) verschickt Apple über den Apple Push Notification Service; du kannst sie jederzeit abschalten. Der Ehrenclub wird über Apple gekauft – Zahlungsdaten erhalten wir nicht. Auftragsverarbeiter ist Apple (iCloud, Push, App Store).</li><li>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der App-Funktionen). Profil und Freundschaften bleiben, bis du sie in der App mit „Alle meine Daten löschen“ entfernst oder die App längere Zeit nicht nutzt.</li><li>Die App richtet sich ausschließlich an Erwachsene ab 18 Jahren.</li></ol>
-<p class="klein">Verantwortlich: Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info@perlage-apps.de">info@perlage-apps.de</a>. Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch (Art. 15–21 DSGVO) und kannst dich bei einer Aufsichtsbehörde beschweren, z. B. bei Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover. Stand: November 2026.</p>
-</div></section>
-
-<section id="support" style="padding-top:0"><div class="wrap">
-<h2>Hilfe und häufige Fragen</h2>
-<details><summary>Brauche ich ein Konto?</summary><p>Nein. Die App nutzt deine iCloud-Anmeldung auf dem iPhone, ohne Passwort und ohne eigenes Konto.</p></details><details><summary>Wie lösche ich meine Daten?</summary><p>In der App unter Einstellungen → „Alle meine Daten löschen“. Dabei werden dein Profil, deine Freundschaften und Prost-Einträge aus der Cloud entfernt.</p></details><details><summary>Wie stelle ich den Ehrenclub wieder her?</summary><p>Einstellungen → „Käufe wiederherstellen“.</p></details>
-<p style="margin-top:20px">Noch eine Frage? Schreib uns: <a href="mailto:info@perlage-apps.de?subject=Frage zu Ehrenmann">info@perlage-apps.de</a></p>
-</div></section>
-
+<section class="band dunkel"><div class="wrap"><p class="augenbraue">Für wen</p><h2>Erwachsene ab 18 Jahren</h2><p>iPhone</p><p class="fein">Keine Werbung · kein Tracking · deine Daten bleiben bei dir</p></div></section>
+<section id="preise"><div class="wrap mitte"><h2>Preise</h2><div class="preise"><div><p>Kostenlos laden</p></div><div class="hervor"><h3>Ehrenclub</h3><p>einmalig 1,99 €, kein Abo – im Umkreis und weltweit sichtbar sein, Leute in der Nähe entdecken, unbegrenzt eigene Kreationen, goldenes Club-Siegel und ein App-Symbol mit Goldrahmen</p></div><div><p>Bitte genieße Alkohol verantwortungsvoll. Ehrenmann ist für Erwachsene ab 18 Jahren.</p></div></div><p class="hinweis">Preise in Euro für Deutschland; in anderen Ländern zeigt der App Store den Landespreis. Abos verlängern sich automatisch und lassen sich jederzeit in den Einstellungen deiner Apple-ID kündigen.</p></div></section>
+<section id="fragen" style="padding-top:0"><div class="wrap fragen"><h2>Häufige Fragen</h2><details><summary>Brauche ich ein Konto?</summary><p>Nein. Die App nutzt deine iCloud-Anmeldung auf dem iPhone, ohne Passwort und ohne eigenes Konto.</p></details><details><summary>Wie lösche ich meine Daten?</summary><p>In der App unter Einstellungen → „Alle meine Daten löschen“. Dabei werden dein Profil, deine Freundschaften und Prost-Einträge aus der Cloud entfernt.</p></details><details><summary>Wie stelle ich den Ehrenclub wieder her?</summary><p>Einstellungen → „Käufe wiederherstellen“.</p></details></div></section>
+<section id="support" style="padding-top:0"><div class="wrap"><div class="support"><div><h3>Support</h3><p>Fragen, Wünsche oder ein Fehler gefunden? Schreib uns – wir melden uns persönlich.</p><a class="mail" href="mailto:info@perlage-innovation.de?subject=Frage zu Ehrenmann">info@perlage-innovation.de</a></div><div><h3>Ehrenmann ausprobieren</h3><p>Ehre sammeln, Prost teilen: Punkte für alles, was du für deine Liebsten tust – und Freunde sehen, wo du anstößt.</p><div class="aktion"><a href="https://apps.apple.com/de/app/ehrenmann-ehrenfrau/id6828551543">Im App Store laden</a></div></div></div></div></section>
+<section id="datenschutz" style="padding-top:0"><div class="wrap ds"><h2>Datenschutz</h2><ol><li>Ehrenmann erhebt so wenige Daten wie möglich. Es gibt keine Werbung, keine Analyse-Werkzeuge, kein Tracking und keine Weitergabe an Dritte.</li><li>Für die Funktionen mit Freunden nutzt die App die öffentliche Datenbank von Apple iCloud (CloudKit). Gespeichert werden dein Spitzname, deine gewählte Farbe und Anrede, dein Punktestand, dein Freundes-Code, ob du Ehrenclub-Mitglied bist, eine anonyme Kennung von Apple (nicht deine Apple-ID, nicht deine E-Mail), deine Freundschaften und Meldungen, wenn du andere Nutzer meldest.</li><li>Wenn du auf „Prost“ tippst, werden Getränk, ein kurzer Ortsname und dein Standort gespeichert – für Freunde genau, für alle anderen auf etwa 300 Meter gerundet. Der Eintrag läuft nach der Trinkdauer ab und wird gelöscht. Kurze Mitteilungen an Freunde werden nach einem Tag gelöscht.</li><li>Der Standort wird nur abgefragt, während du die App nutzt, und nur geteilt, wenn du aktiv auf „Prost“ tippst. Die Freigabe lässt sich jederzeit in den iPhone-Einstellungen ändern.</li><li>Punkte-Verlauf, Ehrentage, eigene Getränke-Kreationen und alle Einstellungen bleiben nur auf deinem iPhone.</li><li>Mitteilungen (z. B. Freundschaftsanfragen) verschickt Apple über den Apple Push Notification Service; du kannst sie jederzeit abschalten. Der Ehrenclub wird über Apple gekauft – Zahlungsdaten erhalten wir nicht. Auftragsverarbeiter ist Apple (iCloud, Push, App Store).</li><li>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der App-Funktionen). Profil und Freundschaften bleiben, bis du sie in der App mit „Alle meine Daten löschen“ entfernst oder die App längere Zeit nicht nutzt.</li><li>Die App richtet sich ausschließlich an Erwachsene ab 18 Jahren.</li></ol><p class="fein">Verantwortlich: Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info@perlage-innovation.de">info@perlage-innovation.de</a>. Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch (Art. 15–21 DSGVO) und kannst dich bei einer Aufsichtsbehörde beschweren, z. B. bei Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover. Stand: November 2026.</p></div></section>
 <footer><div class="wrap">
-<span style="display:flex;align-items:center;gap:10px"><svg viewBox="0 0 120 140" width="18" height="21" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#B8955C" fill-opacity=".08" stroke="#B8955C" stroke-width="3"/><g fill="#B8955C"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg> Ehrenmann ist eine App von <a href="../">Perlage Apps</a></span>
-<span><a href="../#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a> · <a href="#support">Hilfe</a></span>
+<span class="absender"><svg viewBox="0 0 120 140" width="18" height="21" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg> Ehrenmann ist eine App von <a href="../">Perlage</a></span>
+<nav><a href="../apps/">‹ Alle Apps</a><a href="../">Startseite</a><a href="../#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a><a href="#support">Support</a></nav>
 </div></footer>
+<script>(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var sel='main .titel, .bereich, .ueber .z > *, main .kontakt, .wert, .karte, .ueb, .preis, .schritte li, .paket, .betreuung, .geschenk-band, .zeile, .karten > div, .preise > div, .support > div, .band h2, .anfrage-form';
+var els=[].slice.call(document.querySelectorAll(sel));
+els.forEach(function(e){var p=e.parentElement;e._i=Math.min(p?[].indexOf.call(p.children,e):0,4);e.classList.add('schwebt');
+e.addEventListener('transitionend',function(ev){if(ev.propertyName==='opacity')e.style.transitionDelay=''})});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){var e=x.target;
+if(x.isIntersecting){e.style.transitionDelay=e._i*60+'ms';e.classList.add('da')}
+else{e.style.transitionDelay='';e.classList.remove('da')}})},{rootMargin:'8% 0px 0px 0px',threshold:0});
+els.forEach(function(e){io.observe(e)});
+var bu=document.querySelector('.buehne'),zg=document.querySelector('.zeichen-gross svg'),t=false;
+function gleiten(){t=false;var y=window.scrollY||0;if(bu&&y<900){bu.style.transform='translateY('+(y*.22).toFixed(1)+'px)';bu.style.opacity=Math.max(0,1-y/520).toFixed(3)}
+if(zg){var r=zg.getBoundingClientRect(),m=(r.top+r.height/2-innerHeight/2)/innerHeight;zg.style.transform='translateY('+(m*-46).toFixed(1)+'px)'}}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(gleiten)}},{passive:true});gleiten()})();</script>
 <script>(function(){var d=new Date();if(d>new Date(2027,0,1)){document.querySelectorAll('[data-geschenk]').forEach(function(x){x.remove()})}})();</script></body></html>
