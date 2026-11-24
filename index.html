@@ -224,7 +224,7 @@ footer .absender svg{width:20px;height:auto}
 /* Mitlaufende Leiste */
 .lokal{position:sticky;top:0;z-index:30;background:rgba(20,33,61,.82);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(255,255,255,.14);padding-top:env(safe-area-inset-top,0px)}
 .lokal .wrap{display:flex;align-items:center;gap:12px 28px;min-height:52px}
-.lokal .l-marke{font-size:21px;--wm-schrift:#F7F3EA;white-space:nowrap}.lokal .l-marke .wm-apps{font-size:.5em}
+.lokal .l-marke{font-size:21px;text-decoration:none;--wm-schrift:#F7F3EA;white-space:nowrap}.lokal .l-marke .wm-apps{font-size:.5em}
 .lokal .l-links{margin-left:auto;display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}.lokal .l-links::-webkit-scrollbar{display:none}
 .lokal .l-links a{color:#D6DCE8;text-decoration:none;font-size:14px;white-space:nowrap}.lokal .l-links a:hover{color:#fff}
 .lokal .l-knopf{color:var(--gold);font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}.lokal .l-knopf::after{content:" \203A"}
@@ -252,6 +252,9 @@ a{color:var(--gold)}
 .bereich .weiter,.mail,.store,.mehr{color:var(--gold)!important}
 .haken,.preis.edel .haken{color:var(--text)!important}
 .schritte li::before{background:none!important;border:1px solid var(--gold);color:var(--gold)!important}
+.gruss{color:var(--grau);font-size:13px}.gruss .slogan-gold{color:var(--gold);font-weight:600}
+.rechtstext{max-width:720px}.rechtstext h2{font-family:var(--serif);font-size:1.35rem;margin:44px 0 12px;color:#fff}.rechtstext h2:first-child{margin-top:0}
+.rechtstext p,.rechtstext li{color:var(--grau);font-size:16px;line-height:1.65}.rechtstext ul{padding-left:1.2em}.rechtstext a{color:var(--gold)}
 .recht{border-top:0!important}.recht p{color:var(--grau)!important}
 .ueber{background:none!important}
 footer{border-top:1px solid rgba(255,255,255,.14)}
@@ -390,22 +393,10 @@ footer{border-top:1px solid rgba(255,255,255,.14)}
 </div></section>
 
 </main>
-<section class="recht"><div class="wrap spalten">
-<div id="impressum"><h3>Impressum</h3>
-<p>Angaben gemäß § 5 DDG</p>
-<p>Alexander Matthias Müller<br>Perlage Apps<br>Barnefeldstraße 12E<br>31515 Wunstorf<br>Deutschland</p>
-<p>E-Mail: <a href="mailto:info@perlage-innovation.de">info@perlage-innovation.de</a></p>
-<p>Verantwortlich für den Inhalt: Alexander Matthias Müller, Anschrift wie oben.</p></div>
-<div id="datenschutz"><h3>Datenschutz auf dieser Website</h3>
-<p>Diese Website wird bei GitHub Pages (GitHub Inc., USA) bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Daten wie deine IP-Adresse, um die Seite auszuliefern und die Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). Wir setzen keine Cookies, laden keine Schriften oder Inhalte von Drittanbietern und werten die Aufrufe nicht aus.</p></div>
-<div><h3>Deine Rechte</h3>
-<p>Verantwortlich: Alexander Matthias Müller – Perlage Apps, Barnefeldstraße 12E, 31515 Wunstorf, Deutschland, E-Mail: <a href="mailto:info@perlage-innovation.de">info@perlage-innovation.de</a>.</p>
-<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch (Art. 15–21 DSGVO) und kannst dich bei einer Aufsichtsbehörde beschweren, z. B. bei Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover.</p>
-<p>Die Datenschutzhinweise zu den einzelnen Apps stehen auf der jeweiligen App-Seite.</p></div>
-</div></section>
 <footer><div class="wrap">
 <span class="absender"><svg viewBox="0 0 120 140" aria-hidden="true"><rect x="1.5" y="25.5" width="117" height="113" rx="26" fill="#D4B483" fill-opacity=".08" stroke="#D4B483" stroke-width="3"/><g fill="#D4B483"><rect x="22" y="112" width="10" height="10" rx="1.6"/><rect x="40" y="116" width="7" height="7" rx="1.1"/><rect x="56" y="110" width="11" height="11" rx="1.8"/><rect x="76" y="114" width="8" height="8" rx="1.3"/><rect x="92" y="113" width="7" height="7" rx="1.1"/><rect x="30" y="94" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="50" y="92" width="8" height="8" rx="1.3" fill-opacity="0.95"/><rect x="68" y="96" width="7" height="7" rx="1.1" fill-opacity="0.95"/><rect x="84" y="93" width="6" height="6" rx="1.0" fill-opacity="0.95"/><rect x="38" y="76" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="60" y="74" width="7" height="7" rx="1.1" fill-opacity="0.85"/><rect x="78" y="78" width="5" height="5" rx="0.8" fill-opacity="0.85"/><rect x="46" y="58" width="6" height="6" rx="1.0" fill-opacity="0.7"/><rect x="66" y="56" width="5" height="5" rx="0.8" fill-opacity="0.7"/><rect x="55" y="41" width="5" height="5" rx="0.8" fill-opacity="0.55"/><rect x="60" y="11" width="5" height="5" rx="0.8" fill-opacity="0.5"/><rect x="70" y="0" width="4" height="4" rx="0.6" fill-opacity="0.35"/></g></svg> © 2026 Perlage · Alexander Matthias Müller</span>
-<span><a href="./#impressum">Impressum</a> · <a href="./#datenschutz">Datenschutz</a> · <a href="mailto:info@perlage-innovation.de">Kontakt</a></span>
+<span class="gruss">Erbaut und erdacht von Perlage – The pearl of <span class="slogan-gold">innovation</span>.</span>
+<span><a href="datenschutz/">Datenschutz</a> · <a href="impressum/">Impressum</a> · <a href="anfrage/">Kontakt</a></span>
 </div></footer>
 <script>(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 var sel='main .titel, .bereich, .ueber .z > *, main .kontakt, .wert, .karte, .ueb, .preis, .schritte li, .paket, .betreuung, .geschenk-band, .zeile, .karten > div, .preise > div, .support > div, .band h2, .anfrage-form';
@@ -421,5 +412,5 @@ function gleiten(){t=false;var y=window.scrollY||0;if(bu&&y<900){bu.style.transf
 if(zg){var r=zg.getBoundingClientRect(),m=(r.top+r.height/2-innerHeight/2)/innerHeight;zg.style.transform='translateY('+(m*-46).toFixed(1)+'px)'}}
 addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(gleiten)}},{passive:true});gleiten()})();</script>
 
-<script>(function(){var h=location.hash.slice(1);if(["apps","vermieter","kinder","bar","alltag","spiele"].indexOf(h)>-1){location.replace("apps/"+(h=="apps"?"":"#"+h))}})();</script>
+<script>(function(){var h=location.hash.slice(1);if(h=="impressum"||h=="datenschutz"){location.replace(h+"/");return}if(["apps","vermieter","kinder","bar","alltag","spiele"].indexOf(h)>-1){location.replace("apps/"+(h=="apps"?"":"#"+h))}})();</script>
 </body></html>
